@@ -30,6 +30,7 @@ production stylesheet in assets/built/screen.css
 
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
+
 @import "global.css";
 
 body {
@@ -66,18 +67,23 @@ body {
   flex-grow: 1;
 }
 
+
 /* Full width page blocks */
+
 .outer {
   position: relative;
   padding: 0 5vw;
 }
 
+
 /* Centered content container blocks */
+
 .inner {
   margin: 0 auto;
   max-width: 1040px;
   width: 100%;
 }
+
 
 /* Usage:
 
@@ -88,6 +94,7 @@ body {
 </div>
 
 */
+
 
 /* 3. Special Template Styles
 /* ---------------------------------------------------------- */
@@ -188,6 +195,7 @@ body {
   opacity: 0.8;
 }
 
+
 /* 4.1 Home header
 /* ---------------------------------------------------------- */
 
@@ -238,7 +246,6 @@ body {
   color: var(--midgrey);
   opacity: 1.0;
 }
-
 
 .site-archive-header .no-image .site-header-content {
   padding: 5vw 0 10px;
@@ -324,8 +331,8 @@ body {
   letter-spacing: 0.2px;
   text-transform: uppercase;
   white-space: nowrap;
-
   -ms-overflow-scrolling: touch;
+  font-family: Aller, Quantico, sans-serif;
 }
 
 @media (max-width: 700px) {
@@ -350,6 +357,7 @@ body {
     padding-right: 20px;
   }
 }
+
 
 /* Site Nav Hack Explanation (above):
 
@@ -675,7 +683,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
   width: 100%;
   height: 200px;
   background: var(--lightgrey) no-repeat center center;
-
   object-fit: cover;
 }
 
@@ -702,17 +709,21 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .post-card-primary-tag {
-  color: var(--blue);
+  color: var(--green);
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.2px;
   text-transform: uppercase;
+  border: 1px dashed;
+  padding: 0 5px;
+  border-radius: 4px;
 }
 
 .post-card-title {
   margin: 0 0 0.4em;
   line-height: 1.15em;
   transition: color 0.2s ease-in-out;
+  font-family: Ubuntu, sans-serif;
 }
 
 .no-image .post-card-title {
@@ -728,7 +739,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .post-card-excerpt {
   max-width: 56em;
   color: var(--midgrey);
-  font-family: Georgia, serif;
+  font-family: Quantico, sans-serif;
 }
 
 .post-card-excerpt p {
@@ -748,7 +759,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
   height: 100%;
   background: color(var(--lightgrey) l(+10%));
   border-radius: 100%;
-
   object-fit: cover;
 }
 
@@ -867,6 +877,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
   display: inline-block;
 }
 
+
 /* Special Styling for home page grid (below):
 
 The first post in the list is styled to be bigger than the others and take over
@@ -932,6 +943,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 
 /* Adjust some margins for smaller screens */
+
 @media (max-width: 1170px) {
   .post-card {
     margin-bottom: 5vw;
@@ -977,14 +989,21 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 .post-full-tags {
+  font-family: Aller, Quantico, sans-serif;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: var(--midgrey);
   font-size: 1.3rem;
   line-height: 1.4em;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+.post-full-tags>a {
+  color: var(--green);
+  border: 1px dashed;
+  padding: 0 5px;
+  border-radius: 4px;
 }
 
 .post-full-meta-date {
@@ -1019,8 +1038,8 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 .post-full-custom-excerpt {
   margin: 20px 0 0;
-  color: var(--midgrey);
-  font-family: Georgia, serif;
+  color: var(--lightgrey);
+  font-family: Quantico, sans-serif;
   font-size: 2.3rem;
   line-height: 1.4em;
   font-weight: 300;
@@ -1053,7 +1072,6 @@ make sure this only happens on large viewports / desktop-ish devices.
   margin: 0 auto;
   padding: 0 170px 5vw;
   min-height: 230px;
-  font-family: Georgia, serif;
   font-size: 2.0rem;
   line-height: 1.6em;
   background: #fff;
@@ -1179,6 +1197,7 @@ Usage (In Ghost edtior):
 ![img](/some/image.jpg#full)
 
 */
+
 .post-full-content img[src$="#full"] {
   max-width: none;
   width: 100vw;
@@ -1193,6 +1212,7 @@ Usage (In Ghost editor):
 <small>Your image caption</small>
 
 */
+
 .post-full-content img+br+small {
   display: block;
   margin-top: -3em;
@@ -1202,6 +1222,7 @@ Usage (In Ghost editor):
 
 
 /* Override third party iframe styles */
+
 .post-full-content iframe {
   margin: 0 auto !important;
 }
@@ -1256,7 +1277,7 @@ Usage (In Ghost editor):
   border-radius: 5px;
 }
 
-.post-full-content pre ::selection {
+.post-full-content pre::selection {
   color: color(var(--midgrey) l(-25%));
 }
 
@@ -1267,7 +1288,7 @@ Usage (In Ghost editor):
   background: transparent;
 }
 
-.post-full-content pre code :not(span) {
+.post-full-content pre code:not(span) {
   color: inherit;
 }
 
@@ -1295,16 +1316,6 @@ Usage (In Ghost editor):
 
 .post-full-content hr+p {
   margin-top: 1.2em;
-}
-
-.post-full-content h1,
-.post-full-content h2,
-.post-full-content h3,
-.post-full-content h4,
-.post-full-content h5,
-.post-full-content h6 {
-  color: color(var(--darkgrey) l(-5%));
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .post-full-content h1 {
@@ -1390,8 +1401,6 @@ Usage (In Ghost editor):
   margin: 0.5em 0;
   padding: 0.4em 1em 0.9em;
   border: 0;
-  color: var(--blue);
-  font-family: Georgia, serif;
   font-size: 3.2rem;
   line-height: 1.35em;
   text-align: center;
@@ -1447,7 +1456,9 @@ Usage (In Ghost editor):
   box-shadow: none !important;
 }
 
+
 /* Some grouped styles for smaller viewports */
+
 @media (max-width: 1170px) {
   .post-full-image {
     margin: 25px -6vw 50px;
@@ -1492,7 +1503,9 @@ Usage (In Ghost editor):
   }
 }
 
+
 /* Tables */
+
 .post-full-content table {
   display: inline-block;
   overflow-x: auto;
@@ -1501,7 +1514,6 @@ Usage (In Ghost editor):
   width: auto;
   border-spacing: 0;
   border-collapse: collapse;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.6rem;
   white-space: nowrap;
   vertical-align: top;
@@ -1740,6 +1752,7 @@ Usage (In Ghost editor):
 
 /* 7.2. Members Subscribe Form
 /* ---------------------------------------------------------- */
+
 .subscribe-form {
   margin: 1.5em 0;
   padding: 6.5vw 7vw 8vw;
@@ -1791,7 +1804,6 @@ Usage (In Ghost editor):
   user-select: text;
   border-radius: 5px;
   transition: border-color 0.15s linear;
-
   -webkit-appearance: none;
 }
 
@@ -1812,12 +1824,8 @@ Usage (In Ghost editor):
   line-height: 39px;
   font-weight: 400;
   text-align: center;
-  background: linear-gradient(color(var(--blue) whiteness(+7%)),
-      color(var(--blue) lightness(-7%) saturation(-10%)) 60%,
-      color(var(--blue) lightness(-7%) saturation(-10%)) 90%,
-      color(var(--blue) lightness(-4%) saturation(-10%)));
+  background: linear-gradient(color(var(--blue) whiteness(+7%)), color(var(--blue) lightness(-7%) saturation(-10%)) 60%, color(var(--blue) lightness(-7%) saturation(-10%)) 90%, color(var(--blue) lightness(-4%) saturation(-10%)));
   border-radius: 5px;
-
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -1870,7 +1878,6 @@ Usage (In Ghost editor):
 .subscribe-form .error .message-error {
   display: block;
 }
-
 
 @media (max-width: 650px) {
   .subscribe-form-title {
@@ -1933,8 +1940,9 @@ Usage (In Ghost editor):
 }
 
 .read-next .post-card-primary-tag {
-  color: #fff;
-  opacity: 0.6;
+  border: 1px dashed;
+  padding: 0 5px;
+  border-radius: 4px;
 }
 
 .read-next .post-card-title {
@@ -2130,7 +2138,9 @@ Usage (In Ghost editor):
   max-width: 100%;
 }
 
+
 /* Preventing full-width image overlap with post image.  */
+
 .post-full-image+.post-full-content .kg-content *:first-child .kg-image {
   width: 100%;
 }
@@ -2161,7 +2171,7 @@ Usage (In Ghost editor):
 .post-full-content figcaption {
   margin: 1.0em auto 0;
   color: color(var(--midgrey) l(-10%));
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: Quantico, sans-serif;
   font-size: 75%;
   line-height: 1.5em;
   text-align: center;
@@ -2182,7 +2192,6 @@ Usage (In Ghost editor):
 .kg-embed-card .fluid-width-video-wrapper {
   margin: 0;
 }
-
 
 @media (max-width: 1040px) {
   .post-full-content .kg-width-full .kg-image {
@@ -2225,7 +2234,9 @@ Usage (In Ghost editor):
   margin: -2.25em 0 3em;
 }
 
+
 /* keep existing <pre> styles for code cards with captions */
+
 .kg-code-card {
   width: 100%;
 }
@@ -2247,7 +2258,6 @@ Usage (In Ghost editor):
   display: flex;
   min-height: 148px;
   color: var(--darkgrey);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-decoration: none;
   border-radius: 3px;
   box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.09);
@@ -2289,7 +2299,6 @@ Usage (In Ghost editor):
   font-size: 1.5rem;
   line-height: 1.5em;
   font-weight: 400;
-
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
@@ -2307,7 +2316,6 @@ Usage (In Ghost editor):
   width: 100%;
   height: 100%;
   border-radius: 0 3px 3px 0;
-
   object-fit: cover;
 }
 
@@ -2400,8 +2408,10 @@ Usage (In Ghost editor):
   }
 }
 
+
 /* 8. Author Template
 /* ---------------------------------------------------------- */
+
 .author-header {
   display: flex;
   flex-direction: row;
@@ -2733,7 +2743,6 @@ Usage (In Ghost editor):
   transform: rotate(-45deg);
 }
 
-
 .subscribe-overlay {
   position: fixed;
   top: 0;
@@ -2748,7 +2757,6 @@ Usage (In Ghost editor):
   opacity: 0;
   transition: opacity 0.2s ease-in;
   pointer-events: none;
-
   backdrop-filter: blur(3px);
 }
 
@@ -2796,7 +2804,7 @@ Usage (In Ghost editor):
   margin: 0 auto 50px;
   max-width: 650px;
   color: #fff;
-  font-family: Georgia, serif;
+  font-family: Ubuntu, sans-serif;
   font-size: 2.4rem;
   line-height: 1.3em;
   font-weight: 300;
@@ -2828,7 +2836,6 @@ Usage (In Ghost editor):
   user-select: text;
   border-radius: 8px;
   transition: border-color 0.15s linear;
-
   -webkit-appearance: none;
 }
 
@@ -2848,12 +2855,8 @@ Usage (In Ghost editor):
   line-height: 38px;
   font-weight: 400;
   text-align: center;
-  background: linear-gradient(color(var(--blue) whiteness(+7%)),
-      color(var(--blue) lightness(-7%) saturation(-10%)) 60%,
-      color(var(--blue) lightness(-7%) saturation(-10%)) 90%,
-      color(var(--blue) lightness(-4%) saturation(-10%)));
+  background: linear-gradient(color(var(--blue) whiteness(+7%)), color(var(--blue) lightness(-7%) saturation(-10%)) 60%, color(var(--blue) lightness(-7%) saturation(-10%)) 90%, color(var(--blue) lightness(-4%) saturation(-10%)));
   border-radius: 8px;
-
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -2885,6 +2888,7 @@ Usage (In Ghost editor):
   align-items: center;
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.3rem;
+  font-family: Aller, Ubuntu, sans-serif;
 }
 
 .site-footer-content a {
@@ -2893,7 +2897,7 @@ Usage (In Ghost editor):
 
 .site-footer-content a:hover {
   color: rgba(255, 255, 255, 1);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .site-footer .copyright a {
@@ -2966,7 +2970,6 @@ textarea:focus {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.4s ease;
-
   appearance: none;
 }
 
@@ -3307,14 +3310,19 @@ form[data-members-form] .button {
   position: relative;
 }
 
+
 /*-- Loading --*/
 
+
 /* Hide button text */
+
 form[data-members-form].loading .button-content {
   visibility: hidden;
 }
 
+
 /* Show loading spinner */
+
 form[data-members-form].loading .button-loader {
   position: absolute;
   left: 50%;
@@ -3329,12 +3337,16 @@ form[data-members-form].loading .button-loader {
   fill: #fff;
 }
 
+
 /*-- Show success message on success --*/
+
 form[data-members-form].success .message-success {
   display: block;
 }
 
+
 /*-- Show error message on error --*/
+
 form[data-members-form].error .message-error {
   display: block;
 }
@@ -3372,7 +3384,6 @@ form[data-members-form].error .message-error {
   border: 1px solid color(var(--lightgrey) l(+10%));
   background: color(var(--lightgrey) l(+10%));
   border-radius: 100%;
-
   object-fit: cover;
 }
 
@@ -3459,7 +3470,6 @@ form[data-members-form].error .message-error {
   box-shadow: inset 0 0 0 1px var(--blue);
   cursor: pointer;
   transition: 0.4s ease;
-
   appearance: none;
 }
 
@@ -3557,7 +3567,6 @@ form[data-members-form].error .message-error {
   max-width: 840px;
   width: 90vw;
   color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-align: center;
   background: color(var(--blue) l(-5%));
   border-radius: 5px;
@@ -3604,6 +3613,7 @@ form[data-members-form].error .message-error {
 
 /* 13. Dark Mode
 /* ---------------------------------------------------------- */
+
 @media (prefers-color-scheme: dark) {
   body {
     color: rgba(255, 255, 255, 0.80);
@@ -3661,7 +3671,7 @@ form[data-members-form].error .message-error {
   }
 
   .post-card-excerpt {
-    color: color(var(--midgrey) l(+10%));
+    color: color(var(--lightgrey));
   }
 
   .author-avatar,
@@ -3681,10 +3691,11 @@ form[data-members-form].error .message-error {
 
   .post-full-title {
     color: rgba(255, 255, 255, 0.9);
+    font-family: Ubuntu, sans-serif;
   }
 
   .post-full-custom-excerpt {
-    color: color(var(--midgrey) l(+10%));
+    color: color(var(--lightgrey));
   }
 
   .post-full-image {
@@ -3886,37 +3897,5 @@ form[data-members-form].error .message-error {
   input[type="url"],
   select {
     color: var(--darkgrey);
-  }
-}
-
-/* Custom Content */
-
-progress.reading-progress-bar {
-  appearance: none;
-  position: fixed;
-  width: 90%;
-  height: 2px;
-}
-
-progress.reading-progress-bar[value]::-webkit-progress-bar {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-progress.reading-progress-bar[value]::-webkit-progress-value {
-  background-color: color(var(--yellow));
-}
-
-@media (min-width: 768px) {
-  progress::before {
-    content: attr(data-reading-progress);
-    position: absolute;
-    background: none;
-    font-size: .6em;
-    margin: .6em .8em;
-    color: white;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    padding: .3em .6em;
-    border-radius: .8em;
   }
 }
