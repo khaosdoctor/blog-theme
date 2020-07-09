@@ -17,7 +17,7 @@ const customProperties = require('postcss-custom-properties')
 const easyimport = require('postcss-easy-import')
 
 function serve (done) {
-  livereload.listen()
+  livereload.listen({ port: 3000, host: "0.0.0.0" })
   done()
 }
 
@@ -79,13 +79,19 @@ function zipper (done) {
   ], handleError(done))
 }
 
-const cssWatcher = () => watch('assets/css/**', css)
-const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs)
-const watcher = parallel(cssWatcher, hbsWatcher)
+const cssWatcher = (options = { zip: false }) => () => watch('assets/css/**', options.zip ? series(css, zipper) : css)
+const jsWatcher = (options = { zip: false }) => () => watch('assets/js/**', options.zip ? series(js, zipper) : js)
+const hbsWatcher = (options = { zip: false }) => () => watch(['*.hbs', 'partials/**/*.hbs'], options.zip ? series(hbs, zipper) : hbs)
+
+const watcher = parallel(cssWatcher(), jsWatcher(), hbsWatcher())
+const watcherZip = parallel(cssWatcher({ zip: true }), jsWatcher({ zip: true }), hbsWatcher({ zip: true }))
+
 const build = series(css, js)
 const dev = series(build, serve, watcher)
+const devZip = series(build, watcherZip)
 
 exports.build = build
+exports.devZip = devZip
 exports.zip = series(build, zipper)
 exports.default = dev
 
@@ -100,8 +106,8 @@ try {
   config = null
 }
 
-const REPO = 'TryGhost/Casper'
-const USER_AGENT = 'Casper'
+const REPO = 'TryGhost/Lyra'
+const USER_AGENT = 'Lyra'
 const CHANGELOG_PATH = path.join(process.cwd(), '.', 'changelog.md')
 
 const changelog = ({ previousVersion }) => {
