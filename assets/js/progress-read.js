@@ -8,7 +8,7 @@ const readingProgress = (contentArea, progressBar) => {
   progress.setAttribute('max', readingTimeLabel.textContent.split(' ').filter(e => !isNaN(parseInt(e))).pop() || 1)
 
   // Minutes remaining label template
-  const label = value => `${value} minuto${value !== 1 ? "s" : ""} restantes`
+  const label = value => `${value} minuto${value !== 1 ? "s" : ""} restante${value !== 1 ? "s" : ""}`
 
   // Set the progress bar label to maximum time remaining if data attribute is present
   if (progress.hasAttribute('data-reading-progress')) {
