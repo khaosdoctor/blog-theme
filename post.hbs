@@ -4,6 +4,52 @@
 into the {body} of the default.hbs template --}}
 <header class="site-header">
   {{> site-header}}
+
+  {{!-- Prism Code Highlight style --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-okaidia.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.min.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/toolbar/prism-toolbar.min.css" />
+
+  {{!-- PrismJS code block style --}}
+  <style type="text/css">
+    pre[class*=language-] {
+      /* Code block style */
+      margin: 1.75em 0;
+      font-size: 1.4rem;
+      background: #07040A;
+      max-width: 100vw;
+    }
+
+    .toolbar {
+      /* Prism Toolbar */
+      transition: none !important;
+      opacity: 1 !important;
+    }
+
+    .toolbar-item {
+      font-family: sans-serif !important;
+      margin-right: 5px;
+    }
+
+    .toolbar span {
+      /* Toolbar Language label */
+      font-weight: bold;
+      background: rgba(107, 10, 13, 0.5) !important;
+      padding: 5px !important;
+    }
+
+    .toolbar button {
+      /* Toolbar Copy Button */
+      padding: 5px !important;
+    }
+  </style>
+
+  {{#contentFor "styles"}}
+    {{!-- Progress bar CSS --}}
+    <link rel="stylesheet" href="{{asset "built/progress.css"}}">
+  {{/contentFor}}
 </header>
 
 {{!-- Everything inside the #post tags pulls data from the post --}}
@@ -48,11 +94,11 @@ into the {body} of the default.hbs template --}}
                           <div class="bio">
                             <h2>{{name}}</h2>
                             <p>{{bio}}</p>
-                            <p><a href="{{url}}">More posts</a> by {{name}}.</p>
+                            <p><a href="{{url}}">Mais posts</a> de {{name}}.</p>
                           </div>
                         {{else}}
                           <h2>{{name}}</h2>
-                          <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                          <p>Leia <a href="{{url}}">mais posts</a> desta pessoa.</p>
                         {{/if}}
                       </div>
                     </div>
@@ -111,20 +157,19 @@ into the {body} of the default.hbs template --}}
 
           <section class="post-full-content">
             <div class="post-content">
-              <p>You don't have access to this post on <strong>{{@site.title}}</strong> at the moment, but
-                if you upgrade your account you'll be able to see the whole thing, as well as all the
-                other posts in the archive! Subscribing only takes a few seconds and will give you
-                immediate access.</p>
+              <p>Você não tem acesso a este post no momento. Mas,
+                se você se inscrever, você conseguirá ver não só este post mas todos os posts do arquivo! Vamos lá!
+                Se inscrever só demora alguns segundos e te dá acesso imediato a tudo!</p>
             </div>
             <aside class="post-upgrade-cta">
               <div class="post-upgrade-cta-content">
                 {{#if @member}}
-                  <h2>This post is for paying subscribers only</h2>
+                  <h2>Este post é somente para assinantes pagos</h2>
                 {{else}}
-                  <h2>This post is for subscribers only</h2>
+                  <h2>Este post é somente para assinantes</h2>
                 {{/if}}
-                <a class="button large primary" href="/signup/">Subscribe now</a>
-                <p><small>Already have an account? <a href="/signin/">Sign in</a></small></p>
+                <a class="button large primary" href="/signup/">Inscreva-se agora!</a>
+                <p><small>Já é assinante? <a href="/signin/">Faça log in!</a></small></p>
               </div>
             </aside>
           </section>
@@ -208,6 +253,27 @@ into the {body} of the default.hbs template --}}
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
+  {{!-- Prism Code Highlight --}}
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre[class*=language-]').forEach(function (node) {
+        node.classList.add('line-numbers');
+      });
+      Prism.highlightAll();
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js"></script>
+
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/toolbar/prism-toolbar.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-language/prism-show-language.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/autolinker/prism-autolinker.min.js"></script>
+  {{!-- Reading time progress bar on top --}}
   <script src="{{asset "built/progress-read.js"}}"></script>
   <script>
 

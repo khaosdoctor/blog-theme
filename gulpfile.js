@@ -54,6 +54,13 @@ function css (done) {
   ], handleError(done))
 }
 
+function fonts (done) {
+  pump([
+    src('assets/fonts/*.*'),
+    dest('assets/built/fonts')
+  ], handleError(done))
+}
+
 function js (done) {
   pump([
     src('assets/js/*.js', { sourcemaps: true }),
@@ -86,7 +93,7 @@ const hbsWatcher = (options = { zip: false }) => () => watch(['*.hbs', 'partials
 const watcher = parallel(cssWatcher(), jsWatcher(), hbsWatcher())
 const watcherZip = parallel(cssWatcher({ zip: true }), jsWatcher({ zip: true }), hbsWatcher({ zip: true }))
 
-const build = series(css, js)
+const build = series(css, js, fonts)
 const dev = series(build, serve, watcher)
 const devZip = series(build, watcherZip)
 

@@ -2,5 +2,7 @@
   <div class="inner">
     {{> "site-nav"}}
   </div>
-  <progress data-reading-progress class="reading-progress-bar"></progress>
+  {{#is "post"}}
+    <progress data-reading-progress class="reading-progress-bar"></progress>
+  {{/is}}
 </div>
