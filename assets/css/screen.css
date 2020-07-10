@@ -1676,7 +1676,7 @@ Usage (In Ghost editor):
 
 .author-card .author-info p {
   margin: 4px 0 0;
-  color: color(var(--midgrey) l(-10%));
+  color: color(var(--lightgrey) l(-5%));
 }
 
 .author-card .author-info .bio h2 {
@@ -1685,6 +1685,13 @@ Usage (In Ghost editor):
 
 .author-card .author-info .bio p {
   margin-top: 0.8em;
+}
+
+.author-card .author-info .bio p:nth-child(3) a {
+  background-color: var(--blue);
+  color: white;
+  font-weight: 800;
+  padding: 3px 5px;
 }
 
 .author-card .author-profile-image {
