@@ -296,7 +296,7 @@ body {
   right: 0;
   left: 0;
   z-index: 1000;
-  background: color(var(--darkgrey) l(-5%));
+  background: var(--darker-bg);
 }
 
 .site-nav {
@@ -709,14 +709,13 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .post-card-primary-tag {
-  color: var(--green);
+  color: white;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 800;
   letter-spacing: 0.2px;
   text-transform: uppercase;
-  border: 1px dashed;
   padding: 0 5px;
-  border-radius: 4px;
+  background-color: var(--green);
 }
 
 .post-card-title {
@@ -989,7 +988,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 .post-full-tags {
-  font-family: Aller, Quantico, sans-serif;
+  font-family: Ubuntu, Quantico, sans-serif;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1000,10 +999,10 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 .post-full-tags>a {
-  color: var(--green);
-  border: 1px dashed;
+  color: white;
   padding: 0 5px;
-  border-radius: 4px;
+  background-color: var(--green);
+  margin-right: 5px;
 }
 
 .post-full-meta-date {
@@ -1919,8 +1918,8 @@ Usage (In Ghost editor):
 /* ---------------------------------------------------------- */
 
 .read-next {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: color(var(--darkgrey) l(-5%));
+  /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+  background: var(--site-bg);
 }
 
 .read-next-feed {
@@ -1940,9 +1939,9 @@ Usage (In Ghost editor):
 }
 
 .read-next .post-card-primary-tag {
-  border: 1px dashed;
   padding: 0 5px;
-  border-radius: 4px;
+  background-color: var(--green);
+  color: white;
 }
 
 .read-next .post-card-title {
@@ -1979,7 +1978,7 @@ Usage (In Ghost editor):
   overflow: hidden;
   margin: 0 25px 50px;
   padding: 25px;
-  background: linear-gradient(color(var(--darkgrey) l(+2%)), color(var(--darkgrey) l(-5%)));
+  background: linear-gradient(color(var(--darkgrey) l(+5%)), var(--darker-bg));
   border-radius: 3px;
 }
 
@@ -2002,8 +2001,10 @@ Usage (In Ghost editor):
 }
 
 .read-next-card-header h3 a {
-  color: #fff;
-  font-weight: 500;
+  color: white;
+  background-color: var(--green);
+  padding: 0 5px;
+  font-weight: 800;
   text-decoration: none;
   opacity: 0.8;
 }
@@ -2878,7 +2879,7 @@ Usage (In Ghost editor):
   padding-top: 20px;
   padding-bottom: 60px;
   color: #fff;
-  background: color(var(--darkgrey) l(-5%));
+  background: var(--darker-bg);
 }
 
 .site-footer-content {
