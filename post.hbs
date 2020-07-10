@@ -61,11 +61,11 @@ into the {body} of the default.hbs template --}}
       <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
 
         <header class="post-full-header">
-          {{#if primary_tag}}
+          {{#if tags}}
             <section class="post-full-tags">
-              {{#primary_tag}}
+              {{#foreach tags limit="5" visibility="public"}}
                 <a href="{{url}}">{{name}}</a>
-              {{/primary_tag}}
+              {{/foreach}}
             </section>
           {{/if}}
 
@@ -121,7 +121,7 @@ into the {body} of the default.hbs template --}}
                   <time class="byline-meta-date"
                     datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
                   <span class="byline-reading-time"><span class="bull">&bull;</span>
-                    {{reading_time}}</span>
+                    {{reading_time minute="1 minuto de leitura" minutes="% minutos de leitura"}}</span>
                 </div>
               </section>
 
@@ -207,7 +207,7 @@ into the {body} of the default.hbs template --}}
               <article class="read-next-card">
                 <header class="read-next-card-header">
                   {{#../primary_tag}}
-                    <h3><span>More in</span> <a href="{{url}}">{{name}}</a></h3>
+                    <h3><span>Mais na tag </span> <a href="{{url}}">{{name}}</a></h3>
                   {{/../primary_tag}}
                 </header>
                 <div class="read-next-card-content">
@@ -218,14 +218,14 @@ into the {body} of the default.hbs template --}}
                         <div class="read-next-card-meta">
                           <p><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
                             –
-                            {{reading_time}}</p>
+                            {{reading_time minute="1 minuto de leitura" minutes="% minutos de leitura"}}</p>
                         </div>
                       </li>
                     {{/foreach}}
                   </ul>
                 </div>
                 <footer class="read-next-card-footer">
-                  <a href="{{#../primary_tag}}{{url}}{{/../primary_tag}}">{{plural meta.pagination.total empty='No posts' singular='% post' plural='See all % posts'}}
+                  <a href="{{#../primary_tag}}{{url}}{{/../primary_tag}}">{{plural meta.pagination.total empty='No posts' singular='% post' plural='Veja todos os % posts'}}
                     →</a>
                 </footer>
               </article>
