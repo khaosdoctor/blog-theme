@@ -1,0 +1,42 @@
+@import "global.css";
+
+body>div.line-wrapper {
+  margin: 0;
+  padding: 0;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  align-items: center;
+  display: inline-flex;
+  z-index: 999999;
+  text-align: center;
+  padding-left: 16vw;
+}
+
+div.line-wrapper div.line {
+  height: 5px;
+  display: inline-block;
+  margin: -2px;
+  padding: 0;
+}
+
+div.line.green {
+  background-color: color(var(--green));
+  width: 25vw;
+}
+
+div.line.red {
+  background-color: color(var(--red));
+  width: 10vw;
+}
+
+div.line.yellow {
+  background-color: color(var(--yellow));
+  width: 9vw;
+}
+
+div.line.blue {
+  background-color: color(var(--blue));
+  width: 25vw;
+}
