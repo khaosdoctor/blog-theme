@@ -35,6 +35,8 @@
   --whitegrey: #e5eff5;
   --pink: rgb(237, 28, 125);
   --brown: rgb(209, 150, 21);
+  --site-bg: #100523;
+  --darker-bg: #080016;
   --darkmode: color(var(--darkgrey) l(+2%));
 }
 
