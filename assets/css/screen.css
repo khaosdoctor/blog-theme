@@ -2894,17 +2894,17 @@ Usage (In Ghost editor):
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--whitesmoke);
   font-size: 1.3rem;
   font-family: Aller, Ubuntu, sans-serif;
 }
 
 .site-footer-content a {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--whitesmoke)
 }
 
 .site-footer-content a:hover {
-  color: rgba(255, 255, 255, 1);
+  color: white;
   text-decoration: underline;
 }
 
@@ -3832,7 +3832,7 @@ form[data-members-form].error .message-error {
   }
 
   .subscribe-form p {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--whitesmoke)
   }
 
   .subscribe-email {
