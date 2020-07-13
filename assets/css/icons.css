@@ -1,0 +1,19 @@
+@import "global.css";
+
+a.icon-link {
+  margin-right: 0.72em;
+  text-decoration: none;
+}
+
+a.icon-link:hover {
+  text-decoration: none;
+}
+
+a.icon-link>svg {
+  fill: color(var(--whitesmoke));
+  height: 16px;
+}
+
+a.icon-link>svg:hover {
+  fill: white;
+}

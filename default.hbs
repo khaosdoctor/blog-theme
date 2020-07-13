@@ -11,10 +11,12 @@
   <title>{{meta_title}}</title>
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080016" />
 
   {{!-- Styles'n'Scripts --}}
   <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
   <link rel="stylesheet" type="text/css" href="{{asset "built/lines.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "built/icons.css"}}" />
 
   {{{block "styles"}}}
 
@@ -43,14 +45,10 @@
           <a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}
           <a href="{{@site.url}}">Home</a>
           <a href="{{@site.url}}/signup">Inscreva-se!</a>
-          {{#if @site.secondary_navigation}}
-            {{navigation type="secondary"}}
-          {{/if}}
-          {{#if @site.facebook}}<a href="{{facebook_url @site.facebook}}" target="_blank"
-              rel="noopener">Facebook</a>{{/if}}
-          {{#if @site.twitter}}<a href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
+          {{> "secondary-nav"}}
         </section>
         <nav class="site-footer-nav">
+          {{> "social-icons"}}
           Powered by
           <a href="https://ghost.org" target="_blank" rel="noopener external noreferrer nofollow">Ghost</a>
         </nav>
@@ -76,9 +74,9 @@
 
 
   {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-    </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+          crossorigin="anonymous">
+          </script>
   <script type="text/javascript" src="{{asset "built/jquery.fitvids.js"}}"></script>
 
   <script src="{{asset "built/infinitescroll.js"}}"></script>

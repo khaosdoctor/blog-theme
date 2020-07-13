@@ -17,6 +17,7 @@
     </div>
   </div>
   <div class="site-nav-right">
+    {{> "social-icons"}}
     {{#if @member}}
       <div class="account-menu">
         <a href="javascript:" class="account-menu-avatar" id="account-menu" type="checkbox" name="menu">
@@ -30,12 +31,12 @@
             <small>Logado como</small>
             <span class="account-email" title="{{@member.email}}">{{@member.email}}</span>
           </li>
-          {{!-- <li><a href="{{@site.url}}/account/">Conta</a></li> --}}
+          {{!-- <li><a href="{{@site.url}}/account/">Conta</a></li> --}} {{!-- Removed account in button --}}
           <li><a href="#signout" data-members-signout>Log out</a></li>
         </ul>
       </div>
     {{else}}
-      {{!-- <a class="signin-link" href="{{@site.url}}/signin/">Log in</a> --}}
+      {{!-- <a class="signin-link" href="{{@site.url}}/signin/">Log in</a> --}} {{!-- Removed Sign in button --}}
       <a class="button primary small header-cta" href="{{@site.url}}/signup/">Inscreva-se!</a>
     {{/if}}
   </div>
