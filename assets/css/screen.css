@@ -1929,11 +1929,16 @@ Usage (In Ghost editor):
   background: var(--site-bg);
 }
 
+.read-next-title {
+  margin: 0;
+  font-family: Aller, Quantico, Ubuntu, sans-serif;
+}
+
 .read-next-feed {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -25px;
-  padding: 60px 0 0 0;
+  padding: 30px 0 0 0;
 }
 
 .read-next .post-card {
@@ -3906,4 +3911,19 @@ form[data-members-form].error .message-error {
   select {
     color: var(--darkgrey);
   }
+}
+
+.post-full-newsletter {
+  border-top: 1px solid color(var(--darkmode) l(+15%));
+}
+
+.post-full-newsletter>section.subscribe-form {
+  background: var(--darkmode);
+  margin: 0;
+  margin-bottom: 1em;
+  padding: 2em;
+}
+
+.post-full-newsletter>section.subscribe-form>h3.subscribe-form-title {
+  font-family: Aller, Quantico, Ubuntu, sans-serif;
 }

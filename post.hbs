@@ -7,10 +7,8 @@ into the {body} of the default.hbs template --}}
 
   {{!-- Prism Code Highlight style --}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-okaidia.min.css" />
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.min.css" />
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/toolbar/prism-toolbar.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/toolbar/prism-toolbar.min.css" />
 
   {{!-- PrismJS code block style --}}
   <style type="text/css">
@@ -118,8 +116,7 @@ into the {body} of the default.hbs template --}}
               <section class="post-full-byline-meta">
                 <h4 class="author-name">{{authors}}</h4>
                 <div class="byline-meta-content">
-                  <time class="byline-meta-date"
-                    datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+                  <time class="byline-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
                   <span class="byline-reading-time"><span class="bull">&bull;</span>
                     {{reading_time minute="1 minuto de leitura" minutes="% minutos de leitura"}}</span>
                 </div>
@@ -176,6 +173,10 @@ into the {body} of the default.hbs template --}}
 
         {{/if}}
 
+        <section class="post-full-newsletter">
+          {{> "subscribe-form"}}
+        </section>
+
         <section class="post-full-comments">
           <div id="disqus_thread"></div>
           <script>
@@ -200,6 +201,7 @@ into the {body} of the default.hbs template --}}
   {{!-- Links to Previous/Next posts --}}
   <aside class="read-next outer">
     <div class="inner">
+      <h2 class="read-next-title">Você também pode gostar</h2>
       <div class="read-next-feed">
         {{#if primary_tag}}
           {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
@@ -264,14 +266,11 @@ into the {body} of the default.hbs template --}}
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/prism.min.js"></script>
 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/toolbar/prism-toolbar.min.js"></script>
   <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/toolbar/prism-toolbar.min.js"></script>
-  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-language/prism-show-language.min.js"></script>
+          src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/show-language/prism-show-language.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/autolinker/prism-autolinker.min.js"></script>
   {{!-- Reading time progress bar on top --}}
   <script src="{{asset "built/progress-read.js"}}"></script>
