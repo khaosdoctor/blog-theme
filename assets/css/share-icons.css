@@ -1,0 +1,57 @@
+@import "global.css";
+
+.social-share-inner {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.social-share-inner a,
+.social-share-inner a:hover,
+.social-share-inner a>svg,
+.social-share-inner a>svg:hover {
+  box-shadow: none;
+}
+
+
+.social-share-link {
+  margin-right: 5px;
+}
+
+.social-share-link>svg {
+  transition: fill 0.5s ease-in-out;
+  fill: color(var(--lightgrey) l(-10%));
+  height: 16px
+}
+
+.social-share-link>svg:hover {
+  fill: white;
+}
+
+.social-share-beginning .social-share-link:nth-last-child(-n+4)>svg {
+  height: 22px;
+}
+
+.social-share-link:nth-child(-n+3) {
+  margin-right: 8px;
+}
+
+.social-share-title {
+  color: var(--lightgrey) !important;
+}
+
+section.social-share-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.social-share-end {
+  text-align: center;
+}
+
+.social-share-end .social-share-link:nth-last-child(-n+4)>svg {
+  height: 32px;
+}
+
+.social-share-end .social-share-link:nth-child(-n+3)>svg {
+  height: 26px;
+}

@@ -39,6 +39,7 @@
   --darker-bg: #080016;
   --darkmode: color(var(--darkgrey) l(+2%));
   --whitesmoke: rgba(255, 255, 255, 0.7);
+  --body-color: rgba(255, 255, 255, 0.80);
 }
 
 /* Reset

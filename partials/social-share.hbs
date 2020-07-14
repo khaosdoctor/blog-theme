@@ -1,23 +1,19 @@
-<div class="social-share-wrapper">
-  <a class="social-share-link social-share-facebook"
-     href="https://www.addtoany.com/add_to/facebook?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler \"{{title}}\" escrito por
-     {{primary_author}}! Leia você também!" target="_blank">{{> "icons/facebook"}}</a>
-  <a class="social-share-link social-share-twitter"
-     href="https://www.addtoany.com/add_to/twitter?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler \"{{title}}\" escrito por
-     {{primary_author}}! Leia você também!" target="_blank">{{> "icons/twitter"}}</a>
-  <a class="social-share-link social-share-linkedin"
-     href="https://www.addtoany.com/add_to/linkedin?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler \"{{title}}\" escrito por
-     {{primary_author}}! Leia você também!" target="_blank">{{> "icons/linkedin"}}</a>
-  <a class="social-share-link social-share-telegram"
-     href="https://www.addtoany.com/add_to/telegram?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler \"{{title}}\" escrito por
-     {{primary_author}}! Leia você também!" target="_blank">{{> "icons/telegram"}}</a>
-  <a class="social-share-link social-share-whatsapp"
-     href="https://www.addtoany.com/add_to/whatsapp?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler \"{{title}}\" escrito por
-     {{primary_author}}! Leia você também!" target="_blank">{{> "icons/whatsapp"}}</a>
-  <a class="social-share-link social-share-reddit"
-     href="https://www.addtoany.com/add_to/reddit?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler \"{{title}}\" escrito por
-     {{primary_author}}! Leia você também!" target="_blank">{{> "icons/reddit"}}</a>
-  <a class="social-share-link social-share-pocket"
-     href="https://www.addtoany.com/add_to/pocket?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler \"{{title}}\" escrito por
-     {{primary_author}}! Leia você também!" target="_blank">{{> "icons/pocket"}}</a>
+<div class="social-share-outer social-share-{{position}}">
+  <h4 class="social-share-title">Compartilhe!</h4>
+  <div class="social-share-inner">
+    <a class="social-share-link social-share-facebook" rel="noopener noreferrer nofollow external" href="https://www.addtoany.com/add_to/facebook?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler '{{title}}' escrito por
+       {{authors limit="1" autolink="false"}}! Leia você também!" target="_blank">{{> "icons/facebook"}}</a>
+    <a class="social-share-link social-share-twitter" rel="noopener noreferrer nofollow external" href="https://www.addtoany.com/add_to/twitter?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler '{{title}}' escrito por
+       {{authors limit="1" autolink="false"}}! Leia você também!" target="_blank">{{> "icons/twitter"}}</a>
+    <a class="social-share-link social-share-linkedin" rel="noopener noreferrer nofollow external" href="https://www.addtoany.com/add_to/linkedin?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler '{{title}}' escrito por
+       {{authors limit="1" autolink="false"}}! Leia você também!" target="_blank">{{> "icons/linkedin"}}</a>
+    <a class="social-share-link social-share-telegram" rel="noopener noreferrer nofollow external" href="https://www.addtoany.com/add_to/telegram?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler '{{title}}' escrito por
+       {{authors limit="1" autolink="false"}}! Leia você também!" target="_blank">{{> "icons/telegram"}}</a>
+    <a class="social-share-link social-share-whatsapp" rel="noopener noreferrer nofollow external" href="https://www.addtoany.com/add_to/whatsapp?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler '{{title}}' escrito por
+       {{authors limit="1" autolink="false"}}! Leia você também!" target="_blank">{{> "icons/whatsapp"}}</a>
+    <a class="social-share-link social-share-reddit" rel="noopener noreferrer nofollow external" href="https://www.addtoany.com/add_to/reddit?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler '{{title}}' escrito por
+       {{authors limit="1" autolink="false"}}! Leia você também!" target="_blank">{{> "icons/reddit"}}</a>
+    <a class="social-share-link social-share-pocket" rel="noopener noreferrer nofollow external" href="https://www.addtoany.com/add_to/pocket?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler '{{title}}' escrito por
+       {{authors limit="1" autolink="false"}}! Leia você também!" target="_blank">{{> "icons/pocket"}}</a>
+  </div>
 </div>

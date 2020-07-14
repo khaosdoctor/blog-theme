@@ -34,7 +34,7 @@ production stylesheet in assets/built/screen.css
 @import "global.css";
 
 body {
-  background: #fff;
+  background: var(--darkmode);
 }
 
 .img {
@@ -238,7 +238,7 @@ body {
   padding-top: 0;
   padding-bottom: 0;
   color: var(--darkgrey);
-  background: #fff;
+  background: var(--darkmode);
   opacity: 1.0;
 }
 
@@ -656,7 +656,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
   flex-wrap: wrap;
   margin: 0 -20px;
   padding: 50px 0 0;
-  background: #fff;
+  background: var(--darkmode);
 }
 
 .post-card {
@@ -976,7 +976,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 .post-template .site-main,
 .page-template .site-main {
   padding-bottom: 4vw;
-  background: #fff;
+  background: var(--darkmode);
 }
 
 .post-full-header {
@@ -1073,7 +1073,7 @@ make sure this only happens on large viewports / desktop-ish devices.
   min-height: 230px;
   font-size: 2.0rem;
   line-height: 1.6em;
-  background: #fff;
+  background: var(--darkmode);
 }
 
 @media (max-width: 1170px) {
@@ -3629,7 +3629,7 @@ form[data-members-form].error .message-error {
 
 @media (prefers-color-scheme: dark) {
   body {
-    color: rgba(255, 255, 255, 0.80);
+    color: var(--body-color);
     background: var(--darkmode);
   }
 
