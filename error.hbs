@@ -18,14 +18,12 @@ You'll notice that we *don't* use any JavaScript, or ghost_head / ghost_foot in 
 
 <body>
   <div class="site-wrapper">
-
     <header class="site-header no-image">
       <div class="site-nav-main outer">
         <div class="inner">
           <nav class="site-nav-center">
             {{#if @site.logo}}
-              <a class="site-nav-logo" href="{{@site.url}}"><img src="{{img_url @site.logo size="xs"}}"
-                  alt="{{@site.title}}" /></a>
+              <a class="site-nav-logo" href="{{@site.url}}"><img src="{{img_url @site.logo size="xs"}}" alt="{{@site.title}}" /></a>
             {{else}}
               <a class="site-nav-logo" href="{{@site.url}}">{{@site.title}}</a>
             {{/if}}
@@ -65,5 +63,14 @@ You'll notice that we *don't* use any JavaScript, or ghost_head / ghost_foot in 
     </main>
   </div>
 </body>
+<script type="text/javascript">
+  const description = `
+    Session ID: ${getSession()} ||
+    Error Code: "{{statusCode}}" ||
+    Message: "{{message}}"" ||
+    Referrer: ${document.referrer}
+  `
+  sendErrorEvent(document.title, description)
+</script>
 
 </html>

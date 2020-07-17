@@ -28,16 +28,17 @@
               {{plural ../pagination.total empty='Sem posts ainda' singular='% post' plural='% posts'}}
             </div>
             {{#if website}}
-              <span class="author-social-link"><a href="{{website}}?utm_source=blog&utm_medium=authors_page&utm_campaign=fixed_link"
-                   target="_blank" rel="noopener external noreferrer dofollow">Website</a></span>
+              <span class="author-social-link"><a onclick="sendClickEvent('link_click', 'Author Page Website')"
+                   href="{{website}}?utm_source=blog&utm_medium=authors_page&utm_campaign=fixed_link" target="_blank"
+                   rel="noopener external noreferrer dofollow">Website</a></span>
             {{/if}}
             {{#if twitter}}
-              <span class="author-social-link"><a href="{{twitter_url}}" target="_blank"
-                   rel="noopener external noreferrer">Twitter</a></span>
+              <span class="author-social-link"><a onclick="sendClickEvent('link_click', 'Author Page Twitter')" href="{{twitter_url}}"
+                   target="_blank" rel="noopener external noreferrer">Twitter</a></span>
             {{/if}}
             {{#if facebook}}
-              <span class="author-social-link"><a href="{{facebook_url}}" target="_blank"
-                   rel="noopener external noreferrer">Facebook</a></span>
+              <span class="author-social-link"><a onclick="sendClickEvent('link_click', 'Author Page Facebook')" href="{{facebook_url}}"
+                   target="_blank" rel="noopener external noreferrer">Facebook</a></span>
             {{/if}}
           </div>
         </div>

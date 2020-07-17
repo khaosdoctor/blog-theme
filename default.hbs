@@ -20,6 +20,8 @@
 
   {{{block "styles"}}}
 
+  <script src="{{asset "built/gtagEvents.js"}}"></script>
+
   {{!-- This tag outputs SEO meta+structured data and other important settings --}}
   {{ghost_head}}
 
@@ -42,15 +44,17 @@
     <footer class="site-footer outer">
       <div class="site-footer-content inner">
         <section class="copyright">
-          <a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}
-          <a href="{{@site.url}}">Home</a>
-          <a href="{{@site.url}}/signup">Inscreva-se!</a>
+          <a onclick="sendClickEvent('link_click', 'Footer URL')" href="{{@site.url}}">{{@site.title}}</a> &copy;
+          {{date format="YYYY"}}
+          <a onclick="sendClickEvent('link_click', 'Footer Home')" href="{{@site.url}}">Home</a>
+          <a onclick="sendLeadEvent('Footer Subscribe')" href="{{@site.url}}/signup">Inscreva-se!</a>
           {{> "secondary-nav"}}
         </section>
         <nav class="site-footer-nav">
           {{> "social-icons"}}
           Powered by
-          <a href="https://ghost.org" target="_blank" rel="noopener external noreferrer nofollow">Ghost</a>
+          <a onclick="sendClickEvent('link_click', 'Footer Ghost')" href="https://ghost.org" target="_blank"
+             rel="noopener external noreferrer nofollow">Ghost</a>
         </nav>
       </div>
     </footer>

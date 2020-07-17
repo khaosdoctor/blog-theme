@@ -28,3 +28,12 @@ into the {body} of the default.hbs template --}}
     {{/get}}
   </div>
 </main>
+<script type="text/javascript">
+  const description = `
+    Session ID: ${getSession()} ||
+    Error Code: "{{statusCode}}" ||
+    Message: "{{message}}"" ||
+    Referrer: ${document.referrer}
+  `
+  sendErrorEvent(document.title, description)
+</script>
