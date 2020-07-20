@@ -42,6 +42,136 @@ into the {body} of the default.hbs template --}}
           </div>
         </section>
 
+        <section class="recurring no-spacing">
+          <div class="checkout-form">
+            <h1 class="checkout-title">Apoio recorrente</h1>
+            <p>Para quem quiser me apoiar constantemente</p>
+            <div class="checkout-box">
+
+              <div class="checkout-plan">
+                <header class="checkout-plan-header">
+                  <h3>PicPay</h3>
+                  <span>disponível em: https://picpay.me/khaosdoctor</span>
+                </header>
+                <div class="checkout-plan-content">
+                  <ul>
+                    <li>Pagamento seguro</li>
+                    <li>Suporta muitos meios</li>
+                    <li>Você pode cancelar a qualquer momento</li>
+                  </ul>
+                  <a class="button primary fit" rel="noopener noreferrer nofollow external" target="_blank"
+                     onclick="sendLeadEvent('PicPay Page Doações')" href="https://picpay.me/khaosdoctor" data-members-plan="Monthly">Ver
+                    planos</a>
+                </div>
+              </div>
+
+              <div class="checkout-plan">
+                <header class="checkout-plan-header">
+                  <h3>Apoia.se</h3>
+                  <span>disponível em: https://apoia.se/lsantos</span>
+                </header>
+                <div class="checkout-plan-content">
+                  <ul>
+                    <li>Pagamento seguro</li>
+                    <li>Suporta muitos meios</li>
+                    <li>Você pode cancelar a qualquer momento</li>
+                  </ul>
+                  <a class="button primary fit" rel="noopener noreferrer nofollow external" target="_blank"
+                     onclick="sendLeadEvent('Apoia.se Page Doações')" href="https://apoia.se/lsantos" data-members-plan="Monthly">Ver
+                    planos</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="individual no-spacing">
+          <div class="checkout-form">
+            <h1 class="checkout-title">Apoio único</h1>
+            <p>Para quem quiser me apoiar em apenas uma doação</p>
+            <div class="checkout-box">
+
+              <div class="checkout-plan">
+                <header class="checkout-plan-header">
+                  <h3>PayPal</h3>
+                  <span>Doe o quanto quiser!</span>
+                </header>
+                <div class="checkout-plan-content no-spacing">
+                  <a class="button primary fit" rel="noopener noreferrer nofollow external" target="_blank"
+                     onclick="sendLeadEvent('PayPal Page Doações')" href="https://rb.gy/dqhi1t">Doar</a>
+                </div>
+              </div>
+
+              <div class="checkout-plan">
+                <header class="checkout-plan-header">
+                  <h3>Tippin.me</h3>
+                  <span>Doe o quanto quiser!</span>
+                </header>
+                <div class="checkout-plan-content no-spacing">
+                  <a class="button primary fit" rel="noopener noreferrer nofollow external" target="_blank"
+                     onclick="sendLeadEvent('Tippin Page Doações')" href="https://tippin.me/@_StaticVoid">Doar</a>
+                </div>
+              </div>
+
+              <div class="checkout-plan">
+                <header class="checkout-plan-header">
+                  <h3>BuyMeACoffee</h3>
+                  <span>Doe o quanto quiser!</span>
+                </header>
+                <div class="checkout-plan-content no-spacing">
+                  <a class="button primary fit" onclick="sendLeadEvent('BMC Page Doações')" target="_blank"
+                     href="https://www.buymeacoffee.com/lsantos">Doar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="individual no-spacing">
+          <div class="checkout-form">
+            <h1 class="checkout-title">Apoio único com criptomoedas</h1>
+            <p>Para quem quiser me apoiar em apenas uma doação através de criptocoins</p>
+            <div class="checkout-box">
+
+              <div class="checkout-plan">
+                <header class="checkout-plan-header">
+                  <h3>Bitcoin</h3>
+                  <span>Doe o quanto quiser!</span>
+                </header>
+                <div class="checkout-plan-content no-spacing">
+                  <pre>3NWNzrrbw2NaBrDZQzSnL739vwvbSfJmMv</pre>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAB0CAYAAABUmhYnAAAAAklEQVR4AewaftIAAAQQSURBVO3BQW5rOxbAQFLw/rfM/sODDBRc2Eke1KoSiF9U8YTKVLGjMlXsqEwVOyo7FZPKb1pcR1lcR1lcR3nxRcUnqbyjYlJ5QmWn4omKSeWJik9SmRbXURbXURbXUV58Q+WJip9UsaMyVeyo7FRMKp+k8kTFzuI6yuI6yuI6yot/jMonqexUnGRxHWVxHWVxHeXF/5mKSWWnYqqYVP4li+soi+soi+soL75R8ZNUpoonVN5R8YTKJ1V80uI6yuI6yuI6yosvVP4lKlPFTsWksqMyVUwqU8Wk8oTKT1pcR1lcR1lcR3lV/KWKv1QxqXxSxW9aXEdZXEdZXEcRiKFiR2WqmFR2KiaVqeIJlaliR2WnYkdlqphUpopJZar4pMV1lMV1lMV1lBffUJkqnqiYVKaKHZWp4gmVnYpJ5QmVJyqeUNmpmBbXURbXURbXUew/DCrvqJhUPqniJ6lMFZPKTsWOyhMVk8pUMS2uoyyuoyyuo7x4U8WkMlVMKlPFpDJVTCpTxY7KVDGpTBU7FTsqOxVPqEwVk8q0uI6yuI6yuI7y4hsVT1RMKk9UfFLFTsWkMlVMKj9JZaqYVHYW11EW11EW11FefEPlHRXvUJkqJpWp4pNUnqh4R8WkMlVMKtPiOsriOsriOopAbFTsqDxRsaMyVUwqU8VfUpkqJpWdih2VJxbXURbXURbXUew/DCpTxaQyVUwqU8WkMlXsqOxUTCo/qWJHZadiUpkqdlR2FtdRFtdRFtdRXnxRMansqEwVk8qOyk7FpPJJFZPKVDGpTBU7Fb9pcR1lcR1lcR3lxRcqU8WOyqQyVUwqU8WOyo7KVLGjMqlMFZPKJ6lMFZPKExXT4jrK4jrK4jqKQAwVn6QyVeyoTBWTylQxqUwVT6hMFTsqT1S8Q2VncR1lcR1lcR3lVbGj8o6KSeUdFZPKEypTxRMqU8WksqMyVUwqU8VUsbO4jrK4jrK4jiIQQ8UnqexUTCpTxY7KVDGpPFGxo/KXKiaVaXEdZXEdZXEdxf7DH1LZqXhCZarYUdmp2FGZKp5Q2anYUZkW11EW11EW11EE4hdV/CSVnYodlZ2KSWWqmFSmikllp+KJxXWUxXWUxXWUF19UfJLKjspOxaTyRMUTFZ9U8UTFpPLE4jrK4jrK4jrKi2+oPFHxRMWkslPxhMoTFe9Q+aSKHZVpcR1lcR1lcR3lxR9T2VGZKj6pYlJ5omJHZaqYVJ5QmSqmxXWUxXWUxXWUF3+sYkdlR+WJikllqphUpoodlR2VJ1SmikllWlxHWVxHWVxHefGNit+ksqOyU/EOlZ9UMansVEwqU8W0uI6yuI6yuI7y4guV36QyVeyoPKEyVUwVk8pUsaMyVUwqk8pPWlxHWVxHWVxH+R8AawgjfJ/WAgAAAABJRU5ErkJggg=="
+                       alt="Carteira Bitcoin">
+                </div>
+              </div>
+
+              <div class="checkout-plan">
+                <header class="checkout-plan-header">
+                  <h3>Ethereum</h3>
+                  <span>Doe o quanto quiser!</span>
+                </header>
+                <div class="checkout-plan-content no-spacing">
+                  <pre>0x64f235dF95CD5d53659F5B315eC4e3f1B11a218c</pre>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAB0CAYAAABUmhYnAAAAAklEQVR4AewaftIAAAQjSURBVO3BQW5cORTAQFLo+1+Zk+WDFwo+um1PBFUJxA+qmFSmikllqphUpoodlZ2KHZWdiknlJy2uoyyuoyyuo7z4ouKTVD5JZap4R8WOylQxqTxR8Ukq0+I6yuI6yuI6you/UHmi4omKd6hMFZPKVPFExaQyVbxD5YmKncV1lMV1lMV1lBe/TOUdFTsVk8pUsaMyVUwqU8VvWlxHWVxHWVxHefHLKiaVqWJSmVSmikllqphUpoqp4l+yuI6yuI6yuI7y4i8q/iUqOyqfVPGOik9aXEdZXEdZXEd58YXKT1KZKiaVqWJSmSomlaliUtlRmSomlaliR+U7La6jLK6jLK6j2B/8IpV3VEwqOxXvUJkq/k8W11EW11EW11EEYqiYVHYqJpUnKnZUflLFjspUsaMyVeyoTBWTys7iOsriOsriOsqLb1axozJV7FRMKjsVk8pUsaOyo7JTMam8o2JSmRbXURbXURbXUewPBpWdih2VJyqeUJkqdlSmikllp2JHZar4JJWpYmdxHWVxHWVxHcX+4A0qU8U7VKaKSWWq+E4qU8WOylQxqUwVn7S4jrK4jrK4jvLiC5WpYlJ5QmWnYkdlR2WqmFR2KnYqnqj4JJWpYmdxHWVxHWVxHeWlsqOyUzGpTBWTyqQyVUwqn1QxqXxSxTtUdlR2FtdRFtdRFtdRXhWTylSxo7KjMlXsqEwVk8pUMansqOxU7KhMFZPKd6qYVKbFdZTFdZTFdRT7g0Flp+KTVKaKJ1R2KiaVqWJHZaqYVHYqPkllqpgW11EW11EW11FefFGxo/KOih2VqeI7qUwVU8UTFU+o7FRMFZPKtLiOsriOsriO8uILlZ2K71QxqXxSxaQyqexU7KhMFTsVk8qOylQxLa6jLK6jLK6jvFSmiidUpopJZap4omJHZap4R8WOylTxSRWTylSxs7iOsriOsriO8qrYUXlCZaqYVKaKSWWnYqqYVKaKd6hMFZPKTsVPWlxHWVxHWVxHefGFylQxqTyhMlU8UTGpTBVPqDxR8Q6VJyqeUJkW11EW11EW11FefFGxU/FJKjsqU8VvUtmpeEJlp+KJxXWUxXWUxXWUl8pPqniiYlLZqXiiYlLZqZhUdlSmih2VqWKnYlpcR1lcR1lcR3nxRcUnqbxDZarYUZkqpoqdiknlHRXfSWVaXEdZXEdZXEd58RcqT1Q8UbGjsqMyVeyo7FS8Q+WTVHYqpsV1lMV1lMV1lBe/TGWqmComlR2VnYonKt5RMalMFZPKOxbXURbXURbXUV4cpmJSmVSmih2VnYpPqnhCZVpcR1lcR1lcR3nxFxXfqWJHZadiUpkqJpUdlZ2KSWWq2KmYVHYqJpWpYlpcR1lcR1lcR3nxhcpPUpkqpoodlR2VqWJS+U0Vn7S4jrK4jrK4jvIfjtwvCINsY2UAAAAASUVORK5CYII="
+                       alt="Carteira Ethereum">
+                </div>
+              </div>
+
+              <div class="checkout-plan">
+                <header class="checkout-plan-header">
+                  <h3>Litecoin</h3>
+                  <span>Doe o quanto quiser!</span>
+                </header>
+                <div class="checkout-plan-content no-spacing">
+                  <pre>Lg91EHEg7VzLUzD3bExuLMTSXVcwnozmik</pre>
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAB0CAYAAABUmhYnAAAAAklEQVR4AewaftIAAAQCSURBVO3BQW5bMRTAQFLw/a/MdvmQhYoPO0khaEYgflDFpPJExaTyjop3qEwVk8pPWlxHWVxHWVxHefFFxSep/KaKHZUnKqaKJyo+SWVaXEdZXEdZXEd58Q8qT1Q8UTGpTBVPVLyjYkdlp+IJlScqdhbXURbXURbXUV78MpWpYlLZqdhR2al4R8X/ZHEdZXEdZXEd5cUvq5hUpopJZVKZKnYqJpUnKv5ni+soi+soi+soL/6h4idVTCpTxY7KVDGpPFExqUwV76j4pMV1lMV1lMV1lBdfqPwklaniCZWpYlKZKiaVqWJSmSomlaliR+U7La6jLK6jLK6j2F/8IpVPqthReUfF/2xxHWVxHWVxHeWlMlVMKjsVk8oTFTsqOxWTylTxRMWk8g6VqWJHZaqYVHYW11EW11EW11HsLzZUnqjYUZkqnlD5pIpJZarYUZkqdlR2Kp5QmRbXURbXURbXUQRio2JSeUfFjspU8YTKVLGjslPxhMpUMalMFZPKTsXO4jrK4jrK4jqK/cUHqUwVk8pUMalMFZPKTsWOyk7Fjsp3qthR2VlcR1lcR1lcR3nxhcpU8UTFpDJV7FTsVEwqOypTxTsqJpWp4gmVT1pcR1lcR1lcR3mpvENlp2JHZaqYVKaKd6h8UsWkslMxVUwq71hcR1lcR1lcR7G/+CCV/0nFEypPVLxDZap4QmVaXEdZXEdZXEcRiKHiO6nsVHySyk7FjspUsaOyU7GjMlXsqEyL6yiL6yiL6yivikllqthReaLiCZUnKr6TylSxU7GjMlVMKjsV0+I6yuI6yuI6yosvKp6omFSmiknlHRWTyneq2FGZKiaVnYpJZadiZ3EdZXEdZXEdRSCGiknliYpJZaqYVKaKSWWqmFR+UsWkMlX8psV1lMV1lMV1lFfFTsWkMlVMKlPFpPKbKiaVd1R8kspOxc7iOsriOsriOor9xaDyjopJZadiR2WnYlI5ScWkMlVMi+soi+soi+soL76o+KSKHZWdikllp+IJlaniCZWp4gmVT1pcR1lcR1lcR3mp/KSKnYqdikllqphUpoqpYkdlqnhCZap4QuWJxXWUxXWUxXWUF19UfJLKEyrvUNlR2an4pIonKt6xuI6yuI6yuI7y4h9Unqh4omJS2an4JJVJZap4QuWTVHYqpsV1lMV1lMV1lBe/TGWqeEJlqthR2al4ouKTVHYqJpVpcR1lcR1lcR3lxX9GZap4QmWnYkfliYpJZaqYVKaKqWJSeWJxHWVxHWVxHeXFP1R8p4pJ5YmKHZUdlaliUpkqJpXvVDGpTBXT4jrK4jrK4jrKiy9UfpLKjspUMalMFTsqU8UTKk+oTBU7KlPFE4vrKIvrKIvrKH8ApIYc547NyjQAAAAASUVORK5CYII="
+                       alt="Carteira Litecoin">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
       </article>
 
     </div>
