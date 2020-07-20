@@ -8,16 +8,16 @@
       <span class="avatar-wrapper">{{> "icons/avatar"}}</span>
     {{/if}}
     <section class="author-card-content">
-      <h4 class="author-card-name"><a href="{{url}}">{{name}}</a></h4>
+      <h4 class="author-card-name"><a onclick="sendClickEvent('link_click', 'Author {{name}} Card Name')" href="{{url}}">{{name}}</a></h4>
       {{#if bio}}
         <p>{{bio}}</p>
       {{else}}
-        <p>Leia <a href="{{url}}">mais posts</a> desta pessoa.</p>
+        <p>Leia <a onclick="sendClickEvent('link_click', 'Author {{name}} Card More Posts')" href="{{url}}">mais posts</a> desta pessoa.</p>
       {{/if}}
     </section>
   </section>
   <div class="post-full-footer-right">
-    <a class="author-card-button" href="{{url}}">Leia Mais</a>
+    <a class="author-card-button" onclick="sendClickEvent('link_click', 'Author {{name}} Card Button')" href="{{url}}">Leia Mais</a>
   </div>
 
 {{/primary_author}}

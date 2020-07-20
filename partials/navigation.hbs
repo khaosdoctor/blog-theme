@@ -1,14 +1,15 @@
 {{#if isSecondary}}
   {{!-- secondary navigation --}}
   {{#foreach navigation}}
-    <a class="{{link_class for=(url) class=(concat "nav-" slug)}}" href="{{url absolute="true"}}" aria-label="{{label}}">{{label}}</a>
+    <a onclick="sendClickEvent('link_click', 'Footer {{label}}')" class="{{link_class for=(url) class=(concat "nav-" slug)}}"
+       href="{{url absolute="true"}}" aria-label="{{label}}">{{label}}</a>
   {{/foreach}}
 {{else}}
   {{!-- primary navigation --}}
   <ul class="nav" role="menu">
     {{#foreach navigation}}
-      <li class="{{link_class for=(url) class=(concat "nav-" slug)}}" role="menuitem"><a href="{{url absolute="true"}}"
-           aria-label="{{label}}">{{label}}</a></li>
+      <li onclick="sendClickEvent('link_click', 'Header {{label}}')" class="{{link_class for=(url) class=(concat "nav-" slug)}}"
+          role="menuitem"><a href="{{url absolute="true"}}" aria-label="{{label}}">{{label}}</a></li>
     {{/foreach}}
   </ul>
 {{/if}}

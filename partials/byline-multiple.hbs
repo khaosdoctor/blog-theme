@@ -21,19 +21,20 @@
           <div class="bio">
             {{#if bio}}
               <p>{{bio}}</p>
-              <p><a href="{{url}}">Mais posts</a> by {{name}}.</p>
+              <p><a onclick="sendClickEvent('link_click', 'Author {{name}} Card More Posts')" href="{{url}}">Mais posts</a> de {{name}}.</p>
             {{else}}
-              <p>Leia <a href="{{url}}">mais posts</a> desta pessoa.</p>
+              <p>Leia <a onclick="sendClickEvent('link_click', 'Author {{name}} Read More')" href="{{url}}">mais posts</a> desta pessoa.</p>
             {{/if}}
           </div>
         </div>
 
         {{#if profile_image}}
-          <a href="{{url}}" class="moving-avatar">
+          <a href="{{url}}" onclick="sendClickEvent('link_click', 'Author {{name}} Avatar')" class="moving-avatar">
             <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
           </a>
         {{else}}
-          <a href="{{url}}" class="moving-avatar author-profile-image">{{> "icons/avatar"}}</a>
+          <a href="{{url}}" onclick="sendClickEvent('link_click', 'Author {{name}} Avatar')"
+             class="moving-avatar author-profile-image">{{> "icons/avatar"}}</a>
         {{/if}}
 
       </li>

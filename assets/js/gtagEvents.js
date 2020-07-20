@@ -26,11 +26,11 @@ function sendSearchEvent (term) {
   sendCustomEvent('search', 'search', 'Website Search', { search_term: term })
 }
 
-function sendShareEvent (method, contentId, contentType = 'post') {
-  sendCustomEvent('share', 'user_share', 'Content Shared', { method, content_id: contentId, content_type: contentType })
+function sendShareEvent (method, contentId, label = 'Content Shared', contentType = 'post') {
+  sendCustomEvent('share', 'user_share', label, { method, content_id: contentId, content_type: contentType })
 }
 
-function sendViewPostEvent (contentId, contentType = 'post') {
-  sendCustomEvent('select_content', 'view_post', 'Post Opened', { content_id: contentId, content_type: contentType })
+function sendViewPostEvent (contentId, contentType = 'post', label = 'Post Opened') {
+  sendCustomEvent('select_content', 'view_post', label, { content_id: contentId, content_type: contentType })
 }
 

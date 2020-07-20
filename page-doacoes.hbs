@@ -47,14 +47,16 @@ into the {body} of the default.hbs template --}}
     </div>
   </main>
 
-{{/post}}
 
-{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
-{{#contentFor "scripts"}}
-  <script>
-    $(function () {
-      var $postContent = $(".post-full-content");
-      $postContent.fitVids();
-    });
-  </script>
-{{/contentFor}}
+  {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+  {{#contentFor "scripts"}}
+    <script>
+      $(function () {
+        var $postContent = $(".post-full-content");
+        $postContent.fitVids();
+      });
+      sendViewPostEvent('{{id}}', 'page', '{{title}}')
+    </script>
+  {{/contentFor}}
+
+{{/post}}

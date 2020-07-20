@@ -61,7 +61,7 @@ into the {body} of the default.hbs template --}}
           {{#if tags}}
             <section class="post-full-tags">
               {{#foreach tags limit="5" visibility="public"}}
-                <a href="{{url}}">{{name}}</a>
+                <a href="{{url}}" onclick="sendClickEvent('tag_click', '{{name}}')">{{name}}</a>
               {{/foreach}}
             </section>
           {{/if}}
@@ -93,21 +93,24 @@ into the {body} of the default.hbs template --}}
                           <div class="bio">
                             <h2>{{name}}</h2>
                             <p>{{bio}}</p>
-                            <p><a href="{{url}}">Mais posts</a> de {{name}}.</p>
+                            <p><a href="{{url}}" onclick="sendClickEvent('link_click', 'More Posts From Author {{name}}')">Mais posts</a> de
+                              {{name}}.</p>
                           </div>
                         {{else}}
                           <h2>{{name}}</h2>
-                          <p>Leia <a href="{{url}}">mais posts</a> desta pessoa.</p>
+                          <p>Leia <a href="{{url}}" onclick="sendClickEvent('link_click', 'More Posts From Author {{name}}')">mais posts</a>
+                            desta pessoa.</p>
                         {{/if}}
                       </div>
                     </div>
 
                     {{#if profile_image}}
-                      <a href="{{url}}" class="author-avatar">
+                      <a href="{{url}}" class="author-avatar" onclick="sendClickEvent('link_click', 'Author {{name}} Avatar')">
                         <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
                       </a>
                     {{else}}
-                      <a href="{{url}}" class="author-avatar author-profile-image">{{> "icons/avatar"}}</a>
+                      <a href="{{url}}" onclick="sendClickEvent('link_click', 'Author {{name}} Avatar')"
+                         class="author-avatar author-profile-image">{{> "icons/avatar"}}</a>
                     {{/if}}
 
                   </li>
@@ -167,7 +170,8 @@ into the {body} of the default.hbs template --}}
                 {{else}}
                   <h2>Este post é somente para assinantes</h2>
                 {{/if}}
-                <a class="button large primary" href="/signup/">Inscreva-se agora!</a>
+                <a class="button large primary" onclick="sendLeadEvent('Post &quot;{{title}}&quot; Signup')" href="/signup/">Inscreva-se
+                  agora!</a>
                 <p><small>Já é assinante? <a href="/signin/">Faça log in!</a></small></p>
               </div>
             </aside>
@@ -176,7 +180,25 @@ into the {body} of the default.hbs template --}}
         {{/if}}
 
         <section class="post-full-newsletter">
-          {{> "subscribe-form"}}
+          <section class="subscribe-form">
+            <h3 class="subscribe-form-title">Assine a newsletter!</h3>
+            <p class="subscribe-form-description">Receba conteúdos exclusivos diretamente no seu email!</p>
+            <form data-members-form="subscribe">
+              <div class="form-group">
+                <input class="subscribe-email" data-members-email placeholder="Digite seu email..." autocomplete="false" />
+                <button class="button primary" type="submit" onclick="sendLeadEvent('Post &quot;{{title}}&quot; Subscribe Form')">
+                  <span class="button-content">Inscreva-se!</span>
+                  <span class="button-loader">{{> "icons/loader"}}</span>
+                </button>
+              </div>
+              <div class="message-success">
+                <strong>Excelente!</strong> Um e-mail foi enviado a você. Clique no link para ativar sua conta!
+              </div>
+              <div class="message-error">
+                Este não é um e-mail válido!
+              </div>
+            </form>
+          </section>
         </section>
 
         <section class="post-full-comments">
@@ -206,19 +228,21 @@ into the {body} of the default.hbs template --}}
       <h2 class="read-next-title">Você também pode gostar</h2>
       <div class="read-next-feed">
         {{#if primary_tag}}
-          {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
+          {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="5" as |related_posts|}}
             {{#if related_posts}}
               <article class="read-next-card">
                 <header class="read-next-card-header">
                   {{#../primary_tag}}
-                    <h3><span>Mais na tag </span> <a href="{{url}}">{{name}}</a></h3>
+                    <h3><span>Mais na tag </span> <a
+                         onclick="sendClickEvent('related_tag_click', 'Post &quot;{{title}}&quot; - Tag {{name}}')"
+                         href="{{url}}">{{name}}</a></h3>
                   {{/../primary_tag}}
                 </header>
                 <div class="read-next-card-content">
                   <ul>
                     {{#foreach related_posts}}
                       <li>
-                        <h4><a href="{{url}}">{{title}}</a></h4>
+                        <h4><a onclick="sendViewPostEvent('{{id}}', 'related_post', '{{title}}')" href="{{url}}">{{title}}</a></h4>
                         <div class="read-next-card-meta">
                           <p><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
                             –
@@ -229,7 +253,9 @@ into the {body} of the default.hbs template --}}
                   </ul>
                 </div>
                 <footer class="read-next-card-footer">
-                  <a href="{{#../primary_tag}}{{url}}{{/../primary_tag}}">{{plural meta.pagination.total empty='No posts' singular='% post' plural='Veja todos os % posts'}}
+                  <a onclick="sendClickEvent('see_more_from_tag', 'From post &quot;{{title}}&quot; - Tag
+                     {{#../primary_tag}}{{name}}{{/../primary_tag}}')"
+                     href="{{#../primary_tag}}{{url}}{{/../primary_tag}}">{{plural meta.pagination.total empty='No posts' singular='% post' plural='Veja todos os % posts'}}
                     →</a>
                 </footer>
               </article>
@@ -252,6 +278,12 @@ into the {body} of the default.hbs template --}}
 
   {{!-- Floating header which appears on-scroll, included from includes/floating-header.hbs --}}
   {{!-- {{> floating-header}} --}}
+
+  {{#contentFor "scripts"}}
+    <script>
+      sendViewPostEvent('{{id}}', 'post', '{{title}}')
+    </script>
+  {{/contentFor}}
 
 {{/post}}
 

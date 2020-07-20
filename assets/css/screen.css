@@ -3033,6 +3033,16 @@ textarea:focus {
   background-color: color(var(--blue) l(-10%));
 }
 
+.button.secondary {
+  color: #fff;
+  background-color: var(--yellow);
+  box-shadow: none;
+}
+
+.button.secondary:hover {
+  background-color: color(var(--yellow) l(-10%));
+}
+
 .site-signup {
   display: flex;
   flex-direction: column;
@@ -3543,7 +3553,7 @@ form[data-members-form].error .message-error {
 }
 
 .header-cta {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .post-card-header-tags {

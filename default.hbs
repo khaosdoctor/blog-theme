@@ -44,10 +44,7 @@
     <footer class="site-footer outer">
       <div class="site-footer-content inner">
         <section class="copyright">
-          <a onclick="sendClickEvent('link_click', 'Footer URL')" href="{{@site.url}}">{{@site.title}}</a> &copy;
-          {{date format="YYYY"}}
-          <a onclick="sendClickEvent('link_click', 'Footer Home')" href="{{@site.url}}">Home</a>
-          <a onclick="sendLeadEvent('Footer Subscribe')" href="{{@site.url}}/signup">Inscreva-se!</a>
+          {{> "footer-nav"}}
           {{> "secondary-nav"}}
         </section>
         <nav class="site-footer-nav">
