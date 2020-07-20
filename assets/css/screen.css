@@ -1032,7 +1032,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 .post-full-title {
   margin: 0 0 0.2em;
-  color: color(var(--darkgrey) l(-5%));
+  /* color: color(var(--darkgrey) l(-5%)); */
 }
 
 .post-full-custom-excerpt {
@@ -1145,9 +1145,9 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 .post-full-content a {
-  color: var(--darkgrey);
+  color: var(--whitesmoke);
   word-break: break-word;
-  box-shadow: var(--darkgrey) 0 -1px 0 inset;
+  box-shadow: var(--whitesmoke) 0 -1px 0 inset;
   transition: all 0.2s ease-in-out;
 }
 
@@ -1157,10 +1157,10 @@ make sure this only happens on large viewports / desktop-ish devices.
   box-shadow: var(--blue) 0 -1px 0 inset;
 }
 
-.post-full-content strong,
+/* .post-full-content strong,
 .post-full-content em {
   color: color(var(--darkgrey) l(-5%));
-}
+} */
 
 .post-full-content small {
   display: inline-block;
@@ -3835,7 +3835,7 @@ form[data-members-form].error .message-error {
 
   .post-full-content code {
     color: #fff;
-    background: #000;
+    background: var(--darker-bg);
   }
 
   hr {
