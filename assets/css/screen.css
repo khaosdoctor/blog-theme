@@ -1001,7 +1001,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 .post-full-tags>a {
   color: white;
   padding: 0 5px;
-  background-color: var(--green);
+  background-color: var(--red);
   margin-right: 5px;
 }
 
@@ -1952,7 +1952,7 @@ Usage (In Ghost editor):
 
 .read-next .post-card-primary-tag {
   padding: 0 5px;
-  background-color: var(--green);
+  background-color: var(--red);
   color: white;
 }
 
@@ -2014,7 +2014,7 @@ Usage (In Ghost editor):
 
 .read-next-card-header h3 a {
   color: white;
-  background-color: var(--green);
+  background-color: var(--red);
   padding: 0 5px;
   font-weight: 800;
   text-decoration: none;
@@ -3824,9 +3824,22 @@ form[data-members-form].error .message-error {
   }
 
   .post-full-content strong {
+    transition: background-color 0.5s ease-in-out;
     background-color: var(--red);
-    padding: 0 3px;
+    padding: 1px 3px;
+    border-radius: 3px;
     font-weight: bold;
+  }
+
+  .post-full-content strong:hover {
+    background-color: color(var(--red) l(-5%));
+    padding: 1px 3px;
+    font-weight: bold;
+  }
+
+  .post-full-content strong a:hover {
+    color: white !important;
+    box-shadow: white 0 -1px 0 inset !important;
   }
 
   .post-full-content em {
