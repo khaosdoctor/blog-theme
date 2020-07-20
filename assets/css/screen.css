@@ -1002,6 +1002,7 @@ make sure this only happens on large viewports / desktop-ish devices.
   color: white;
   padding: 0 5px;
   background-color: var(--red);
+  border-radius: 3px;
   margin-right: 5px;
 }
 
@@ -1953,6 +1954,7 @@ Usage (In Ghost editor):
 .read-next .post-card-primary-tag {
   padding: 0 5px;
   background-color: var(--red);
+  border-radius: 3px;
   color: white;
 }
 
@@ -2017,6 +2019,7 @@ Usage (In Ghost editor):
   background-color: var(--red);
   padding: 0 5px;
   font-weight: 800;
+  border-radius: 3px;
   text-decoration: none;
   opacity: 0.8;
 }
@@ -3825,14 +3828,14 @@ form[data-members-form].error .message-error {
 
   .post-full-content strong {
     transition: background-color 0.5s ease-in-out;
-    background-color: var(--red);
+    background-color: var(--green);
     padding: 1px 3px;
     border-radius: 3px;
     font-weight: bold;
   }
 
   .post-full-content strong:hover {
-    background-color: color(var(--red) l(-5%));
+    background-color: color(var(--green) l(-5%));
     padding: 1px 3px;
     font-weight: bold;
   }
