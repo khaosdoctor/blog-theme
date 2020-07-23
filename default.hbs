@@ -7,11 +7,15 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+  <link rel="manifest" href="manifest.json" />
+
   {{!-- Base Meta --}}
   <title>{{meta_title}}</title>
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#080016" />
+  <meta name="msapplication-TileColor" content="#080016">
+  <meta name="msapplication-TileImage" content="{{asset "images/ms-icon-144x144.png"}}">
 
   {{!-- Styles'n'Scripts --}}
   <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
@@ -21,6 +25,7 @@
   {{{block "styles"}}}
 
   <script src="{{asset "built/gtagEvents.js"}}"></script>
+  <script type="module" src="{{asset "built/pwabuilder-sw-register.js"}}"></script>
 
   {{!-- This tag outputs SEO meta+structured data and other important settings --}}
   {{ghost_head}}
@@ -152,6 +157,7 @@
       });
     });
   </script>
+  <script src="https://raw.githubusercontent.com/boyofgreen/ManUp.js/master/manup.min.js"></script>
 
   {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
   {{{block "scripts"}}}

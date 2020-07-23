@@ -1,0 +1,50 @@
+{
+  "dir": "ltr",
+  "lang": "Portuguese",
+  "name": "Lucas Santos dev blog",
+  "short_name": "Lucas Santos",
+  "scope": "/",
+  "display": "standalone",
+  "start_url": "https://blog.lsantos.dev/",
+  "background_color": "transparent",
+  "theme_color": "#080016",
+  "description": "conteúdos sobre dev & tech",
+  "orientation": "portrait",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "icons": [{
+    "src": "/assets/icons/favicon.png",
+    "type": "image/png",
+    "sizes": "64x64"
+  }],
+  "url": "https://blog.lsantos.dev",
+  "screenshots": [{
+      "src": "assets/images/screenshot1.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "fileName": "assets/images/screenshot1.png",
+      "generated": true
+    },
+    {
+      "src": "assets/images/screenshot2.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "fileName": "assets/images/screenshot2.png",
+      "generated": true
+    },
+    {
+      "src": "assets/images/screenshot3.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "fileName": "assets/images/screenshot3.png",
+      "generated": true
+    },
+    {
+      "src": "assets/images/screenshot4.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "fileName": "assets/images/screenshot4.png",
+      "generated": true
+    }
+  ]
+}
