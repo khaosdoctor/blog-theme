@@ -6,6 +6,10 @@ function sendLeadEvent (label, value = 0, currency = 'BRL') {
   sendCustomEvent('generate_lead', 'lead', label, { value, currency })
 }
 
+function sendConvertionEvent (email = '',) {
+  sendCustomEvent('sign_up', 'newsletter', `Newsletter Signup from ${email}`)
+}
+
 function sendPageViewEvent (category, label) {
   sendCustomEvent('page_view', category, label)
 }

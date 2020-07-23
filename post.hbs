@@ -186,7 +186,8 @@ into the {body} of the default.hbs template --}}
             <form data-members-form="subscribe">
               <div class="form-group">
                 <input class="subscribe-email" data-members-email placeholder="Digite seu email..." autocomplete="false" />
-                <button class="button primary" type="submit" onclick="sendLeadEvent('Post &quot;{{title}}&quot; Subscribe Form')">
+                <button class="button primary" type="submit"
+                        onclick="sendConvertionEvent(`${document.querySelector('input.subscribe-email').value} in post &quot;{{title}}&quot; Subscribe Form`)">
                   <span class="button-content">Inscreva-se!</span>
                   <span class="button-loader">{{> "icons/loader"}}</span>
                 </button>
@@ -308,6 +309,11 @@ into the {body} of the default.hbs template --}}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/autolinker/prism-autolinker.min.js"></script>
   {{!-- Reading time progress bar on top --}}
   <script src="{{asset "built/progress-read.js"}}"></script>
+  <script>
+    document
+      .querySelectorAll('.post-content a')
+      .forEach(e => e.addEventListener('click', (self) => sendClickEvent('inner_post_click', `Post "{{title}}" | Link "${self.target.innerText}" | Sends to "${self.target.href}"`)))
+  </script>
   <script>
 
     // NOTE: Scroll performance is poor in Safari
