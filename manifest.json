@@ -6,7 +6,7 @@
   "scope": "/",
   "display": "standalone",
   "start_url": "https://blog.lsantos.dev/",
-  "background_color": "transparent",
+  "background_color": "#080016",
   "theme_color": "#080016",
   "description": "conteúdos sobre dev & tech",
   "orientation": "portrait",
