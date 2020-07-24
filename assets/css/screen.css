@@ -689,7 +689,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .post-card-content-link {
   position: relative;
   display: block;
-  color: var(--darkgrey);
+  color: white;
 }
 
 .post-card-content-link:hover {
@@ -1158,6 +1158,7 @@ make sure this only happens on large viewports / desktop-ish devices.
   box-shadow: var(--blue) 0 -1px 0 inset;
 }
 
+
 /* .post-full-content strong,
 .post-full-content em {
   color: color(var(--darkgrey) l(-5%));
@@ -1256,7 +1257,7 @@ Usage (In Ghost editor):
   font-size: 0.8em;
   line-height: 1em;
   font-weight: 400 !important;
-  background: var(--whitegrey);
+  background: var(--darker-bg);
   border-radius: 3px;
 }
 
@@ -3744,7 +3745,7 @@ form[data-members-form].error .message-error {
   }
 
   .post-card-title {
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--body-color);
   }
 
   .post-card-excerpt {
