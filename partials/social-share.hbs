@@ -2,25 +2,31 @@
   <h4 class="social-share-title">Compartilhe!</h4>
   <div class="social-share-inner">
     <a onclick="sendShareEvent('Facebook', '{{id}}', 'Content Shared: &quot;{{title}}&quot;')" aria-label="Share to Facebook"
-       class="social-share-link social-share-facebook" rel="noopener noreferrer nofollow external" href="https://www.addtoany.com/add_to/facebook?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler '{{title}}' escrito por
-       {{authors limit="1" autolink="false"}}! Leia você também!" target="_blank">{{> "icons/facebook"}}</a>
+       class="social-share-link social-share-facebook" rel="noopener noreferrer nofollow external"
+       href="https://www.facebook.com/sharer/sharer.php?u={{url absolute=true}}&quote=Acabei de ler '{{title}}' escrito por {{authors limit="1" autolink="false"}}! Leia você também!"
+       target="_blank">{{> "icons/facebook"}}</a>
     <a onclick="sendShareEvent('Twitter', '{{id}}', 'Content Shared: &quot;{{title}}&quot;')" aria-label="Share to Twitter"
-       class="social-share-link social-share-twitter" rel="noopener noreferrer nofollow external" href="https://www.addtoany.com/add_to/twitter?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler '{{title}}' escrito por
-       {{authors limit="1" autolink="false"}}! Leia você também!" target="_blank">{{> "icons/twitter"}}</a>
+       class="social-share-link social-share-twitter" rel="noopener noreferrer nofollow external" href="https://twitter.com/intent/tweet?text=Acabei de ler '{{title}}' escrito por
+       {{authors limit="1" autolink="false"}}! Leia você também! {{url absolute=true}}&related=_staticvoid"
+       target="_blank">{{> "icons/twitter"}}</a>
     <a onclick="sendShareEvent('Linkedin', '{{id}}', 'Content Shared: &quot;{{title}}&quot;')" aria-label="Share to Linkedin"
-       class="social-share-link social-share-linkedin" rel="noopener noreferrer nofollow external" href="https://www.addtoany.com/add_to/linkedin?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler '{{title}}' escrito por
-       {{authors limit="1" autolink="false"}}! Leia você também!" target="_blank">{{> "icons/linkedin"}}</a>
+       class="social-share-link social-share-linkedin" rel="noopener noreferrer nofollow external" href="https://www.linkedin.com/shareArticle?mini=true&url={{url absolute=true}}&title={{title}}&summary=Acabei de ler um post escrito por {{authors limit="1" autolink="false"}}! Leia você também!&source={{@site.url}}
+" target="_blank">{{> "icons/linkedin"}}</a>
     <a onclick="sendShareEvent('Telegram', '{{id}}', 'Content Shared: &quot;{{title}}&quot;')" aria-label="Share to Telegram"
-       class="social-share-link social-share-telegram" rel="noopener noreferrer nofollow external" href="https://www.addtoany.com/add_to/telegram?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler '{{title}}' escrito por
-       {{authors limit="1" autolink="false"}}! Leia você também!" target="_blank">{{> "icons/telegram"}}</a>
+       class="social-share-link social-share-telegram" rel="noopener noreferrer nofollow external"
+       href="https://telegram.me/share/url?url={{url absolute=true}}&text=Acabei de ler '{{title}}', escrito por {{authors limit="1" autolink="false"}}! Leia você também!"
+       target="_blank">{{> "icons/telegram"}}</a>
     <a onclick="sendShareEvent('Whatsapp', '{{id}}', 'Content Shared: &quot;{{title}}&quot;')" aria-label="Share to Whatsapp"
-       class="social-share-link social-share-whatsapp" rel="noopener noreferrer nofollow external" href="https://www.addtoany.com/add_to/whatsapp?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler '{{title}}' escrito por
-       {{authors limit="1" autolink="false"}}! Leia você também!" target="_blank">{{> "icons/whatsapp"}}</a>
+       class="social-share-link social-share-whatsapp" rel="noopener noreferrer nofollow external"
+       href="https://api.whatsapp.com/send?text=Eu acabei de ler '{{title}}' escrito por {{authors limit="1" autolink="false"}}! Leia você também em {{url absolute=true}}"
+       target="_blank">{{> "icons/whatsapp"}}</a>
     <a onclick="sendShareEvent('Reddit', '{{id}}', 'Content Shared: &quot;{{title}}&quot;')" aria-label="Share to Reddit"
-       class="social-share-link social-share-reddit" rel="noopener noreferrer nofollow external" href="https://www.addtoany.com/add_to/reddit?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler '{{title}}' escrito por
-       {{authors limit="1" autolink="false"}}! Leia você também!" target="_blank">{{> "icons/reddit"}}</a>
+       class="social-share-link social-share-reddit" rel="noopener noreferrer nofollow external"
+       href="https://www.reddit.com/submit?url={{url absolute=true}}&title={{title}}, por {{authors limit="1" autolink="false"}}"
+       target="_blank">{{> "icons/reddit"}}</a>
     <a onclick="sendShareEvent('Pocket', '{{id}}', 'Content Shared: &quot;{{title}}&quot;')" aria-label="Share to Pocket"
-       class="social-share-link social-share-pocket" rel="noopener noreferrer nofollow external" href="https://www.addtoany.com/add_to/pocket?linkurl={{url absolute=true}}&amp;linkname=Acabei de ler '{{title}}' escrito por
-       {{authors limit="1" autolink="false"}}! Leia você também!" target="_blank">{{> "icons/pocket"}}</a>
+       class="social-share-link social-share-pocket" rel="noopener noreferrer nofollow external"
+       href="https://getpocket.com/edit.php?url={{url absolute=true}}&url={{url absolute=true}}&title={{title}}, por {{authors limit="1" autolink="false"}}"
+       target="_blank">{{> "icons/pocket"}}</a>
   </div>
 </div>
