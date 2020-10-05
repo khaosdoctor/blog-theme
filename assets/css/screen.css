@@ -1805,7 +1805,7 @@ Usage (In Ghost editor):
   padding: 10px;
   width: 100%;
   border: color(var(--lightgrey) l(+7%)) 1px solid;
-  color: var(--midgrey);
+  color: black;
   font-size: 1.8rem;
   line-height: 1em;
   font-weight: normal;
@@ -2845,7 +2845,7 @@ Usage (In Ghost editor):
   padding: 14px 20px;
   width: 100%;
   border: none;
-  color: var(--midgrey);
+  color: black;
   font-size: 2rem;
   line-height: 1em;
   font-weight: normal;
@@ -2956,7 +2956,7 @@ select {
   outline: 0;
   border: none;
   border: solid 1px var(--lightgrey);
-  color: inherit;
+  /* color: inherit; */
   text-decoration: none;
   background: #fff;
   border-radius: 5px;
@@ -3071,6 +3071,15 @@ textarea:focus {
   font-size: 1.3em;
 }
 
+.signup-form span.signup-description-text p.signup-simple-text {
+  color: white;
+  font-size: 1.3em;
+}
+
+.signup-form h2.signup-subheader {
+  color: var(--midgrey);
+}
+
 .signup-form p small {
   display: inline-block;
   margin: 15px 0 0 0;
@@ -3081,6 +3090,7 @@ textarea:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 50px 0;
 }
 
 .signup-box .button {
@@ -3931,7 +3941,7 @@ form[data-members-form].error .message-error {
 
   .subscribe-email {
     border-color: color(var(--darkmode) l(+6%));
-    color: rgba(255, 255, 255, 0.9);
+    color: black;
     background: color(var(--darkmode) l(+3%));
   }
 

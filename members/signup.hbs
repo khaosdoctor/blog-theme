@@ -57,7 +57,13 @@
       {{!-- Not logged in: Sign up --}}
       <form class="signup-form" data-members-form="signup">
         <h1 class="signup-title">Assine a newsletter!</h1>
-        <p>Receba conteúdos exclusivos diretamente no seu email!</p>
+        <h2 class="signup-subheader">Receba conteúdos exclusivos diretamente no seu email!</h2>
+        <span class="signup-description-text">
+          <p class="signup-simple-text">
+            Assinando esta newsletter, você receberá as últimas notícias sobre tecnologia. Além disso, também realizo algumas ações exclusivas para
+            quem é assinante do blog. Então espere alguns sorteios, códigos de desconto e outras ações sensacionais!
+          </p>
+        </span>
         <div class="signup-box">
           <input data-members-email class="subscribe-email" type="email" placeholder="Digite seu e-mail..." required="true"
                  autocomplete="false" />
@@ -66,6 +72,12 @@
             <span class="button-loader">{{> "icons/loader"}}</span>
           </button>
         </div>
+        <span class="signup-description-text">
+          <p class="signup-simple-text">
+            Eu também odeio spam, então prometo que vou enviar apenas os emails necessários e jamais vou encher a sua caixa de entrada com conteúdo
+            irrelevante.
+          </p>
+        </span>
         {{!-- <p><small>Já tem uma conta? <a href="{{@site.url}}/signin/">Entrar!</a></small></p> --}}
         <div class="message-success"><strong>Excelente!</strong> Um e-mail foi enviado a você! É só clicar no link para
           confirmar sua assinatura</div>
