@@ -18,8 +18,10 @@
   <link rel="manifest" href="{{@site.url}}/manifest.json" />
 
   {{!-- Base Meta --}}
-  <title>{{meta_title}}</title>
   {{{block "site-head"}}}
+  {{#if meta_title}}
+    <title>{{meta_title}}</title>
+  {{/if}}
 
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
