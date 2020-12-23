@@ -1,6 +1,16 @@
-<a onclick="sendClickEvent('link_click', 'Footer URL')" href="{{@site.url}}">{{@site.title}}</a> &copy;
+<a onclick="sendClickEvent('link_click', 'Footer URL')" href="{{@site.url}}">{{@site.title}} <span class="version-number"></span></a> &copy;
 {{date format="YYYY"}}
 <a onclick="sendClickEvent('link_click', 'Footer Home')" href="{{@site.url}}">Home</a>
 <a onclick="sendLeadEvent('Footer Subscribe')" href="{{@site.url}}/signup">Inscreva-se!</a>
 <a onclick="sendLeadEvent('Footer Donation')"
    href="{{@site.url}}/doacoes?utm_source=blog&utm_medium=link_footer&utm_campaign=fixed_link">Apoie meu trabalho!</a>
+
+{{#contentFor "scripts"}}
+  <script type="text/javascript">
+    fetch('/static/version.json')
+      .then((res) => res.json())
+      .then(res => {
+        document.querySelector('span.version-number').innerText = `v${res.version}`
+      });
+  </script>
+{{/contetFor}}
