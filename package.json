@@ -12,13 +12,13 @@
     "desktop": "assets/screenshot-desktop.jpg"
   },
   "scripts": {
-    "dev": "gulp",
-    "dev:zip": "gulp devZip",
-    "build": "gulp build",
-    "zip": "npm i && gulp zip",
+    "dev": "./node_modules/gulp/bin/gulp.js",
+    "dev:zip": "./node_modules/gulp/bin/gulp.js devZip",
+    "build": "./node_modules/gulp/bin/gulp.js build",
+    "zip": "npm i && ./node_modules/gulp/bin/gulp.js zip",
     "test": "gscan .",
     "test:ci": "gscan --fatal --verbose .",
-    "pretest": "gulp build",
+    "pretest": "./node_modules/gulp/bin/gulp.js build",
     "preship": "yarn test",
     "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
   },
@@ -50,7 +50,7 @@
     "autoprefixer": "9.8.4",
     "cssnano": "4.1.10",
     "gscan": "3.5.4",
-    "gulp": "4.0.2",
+    "gulp": "^4.0.2",
     "gulp-livereload": "4.0.2",
     "gulp-postcss": "8.0.0",
     "gulp-sourcemaps": "2.6.5",
