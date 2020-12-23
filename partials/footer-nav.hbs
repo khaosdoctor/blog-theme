@@ -7,10 +7,10 @@
 
 {{#contentFor "scripts"}}
   <script type="text/javascript">
-    fetch("{{@site.url}}/static/version.json")
+    fetch('https://api.github.com/repos/khaosdoctor/blog-theme/tags')
       .then((res) => res.json())
       .then(res => {
-        document.querySelector('span.version-number').innerText = `v${res.version}`
+        document.querySelector('span.version-number').innerText = `v${res[0].name}`
       });
   </script>
 {{/contentFor}}

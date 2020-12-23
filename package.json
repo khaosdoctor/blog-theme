@@ -21,7 +21,7 @@
     "pretest": "./node_modules/gulp/bin/gulp.js build",
     "preship": "yarn test",
     "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi",
-    "postversion": "node updateVersion.js && git commit -am ':bookmark: Version bump' && git push"
+    "postversion": "git push"
   },
   "author": {
     "name": "Ghost Foundation",
