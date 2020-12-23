@@ -2,7 +2,7 @@
   "name": "lyra",
   "description": "A premium publication theme for Ghost.",
   "demo": "https://lyra.ghost.io",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "engines": {
     "ghost": ">=3.0.0",
     "ghost-api": "v3"
@@ -21,7 +21,7 @@
     "pretest": "./node_modules/gulp/bin/gulp.js build",
     "preship": "yarn test",
     "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi",
-    "postversion": "node updateVersion.js"
+    "postversion": "node updateVersion.js && git commit -am ':bookmark: Version bump' && git push"
   },
   "author": {
     "name": "Ghost Foundation",
