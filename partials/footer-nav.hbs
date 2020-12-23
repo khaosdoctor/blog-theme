@@ -7,7 +7,7 @@
 
 {{#contentFor "scripts"}}
   <script type="text/javascript">
-    fetch('/static/version.json')
+    fetch("{{@site.url}}/static/version.json")
       .then((res) => res.json())
       .then(res => {
         document.querySelector('span.version-number').innerText = `v${res.version}`
