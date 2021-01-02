@@ -1805,7 +1805,7 @@ Usage (In Ghost editor):
   padding: 10px;
   width: 100%;
   border: color(var(--lightgrey) l(+7%)) 1px solid;
-  color: black;
+  color: white;
   font-size: 1.8rem;
   line-height: 1em;
   font-weight: normal;
@@ -3941,7 +3941,7 @@ form[data-members-form].error .message-error {
 
   .subscribe-email {
     border-color: color(var(--darkmode) l(+6%));
-    color: black;
+    color: white;
     background: color(var(--darkmode) l(+3%));
   }
 
