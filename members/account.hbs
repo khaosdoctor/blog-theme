@@ -93,7 +93,7 @@
         <p>Hey there! <strong>{{@member.email}}</strong> is subscribed to free updates from {{@site.title}}, but doesn't
           have a paid subscription to unlock full access.</p>
         <div class="authbox-signup">
-          <a class="button primary" href="{{@site.url}}/signup/">
+          <a class="button primary" href="{{@site.url}}#/portal/signup/free">
             <span class="button-content">Subscribe now</span>
           </a>
         </div>
@@ -102,7 +102,7 @@
     {{else}}
 
       {{!-- Not logged in: Redirect to signin --}}
-      <script>window.location = '{{@site.url}}/signin/';</script>
+      <script>window.location = '{{@site.url}}#/portal/signup/free';</script>
 
     {{/if}}
 
