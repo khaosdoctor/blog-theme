@@ -22,9 +22,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm install yarn
-      - run: yarn install
-      - run: yarn zip
+      - run: npm install && npm run zip
       - uses: TryGhost/action-deploy-theme@v1.4.1
         with:
           api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
