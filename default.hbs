@@ -40,40 +40,6 @@
   <script type="module" src="{{asset "built/pwabuilder-sw-register.js"}}"></script>
 
   {{!-- This tag outputs SEO meta+structured data and other important settings --}}
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.css">
-  <style>
-    .gh-content {
-        position: relative;
-    }
-
-    .gh-toc > .toc-list {
-        position: relative;
-    }
-
-    .toc-list {
-        overflow: hidden;
-        list-style: none;
-    }
-
-    @media (min-width: 1300px) {
-        .gh-sidebar {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            margin-top: 4vmin;
-            grid-column: wide-start / main-start; /* Place the TOC to the left of the content */
-        }
-
-        .gh-toc {
-            position: sticky; /* On larger screens, TOC will stay in the same spot on the page */
-            top: 4vmin;
-        }
-    }
-
-    .gh-toc .is-active-link::before {
-        background-color: var(--ghost-accent-color); /* Defines TOC   accent color based on Accent color set in Ghost Admin */
-    }
-  </style>
   {{ghost_head}}
 
 </head>
@@ -207,19 +173,6 @@
 
   {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
   {{{block "scripts"}}}
-
-  <script src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js"></script>
-  {{! Initialize Tocbot after you load the script }}
-  <script>
-    tocbot.init({
-        // Where to render the table of contents.
-        tocSelector: '.gh-toc',
-        // Where to grab the headings to build the table of contents.
-        contentSelector: '.post-full-content',
-        // Which headings to grab inside of the contentSelector element.
-        headingSelector: 'h1, h2, h3, h4',
-    });
-  </script>
   {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
   {{ghost_foot}}
 
