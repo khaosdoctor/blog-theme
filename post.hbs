@@ -22,9 +22,9 @@ into the {body} of the default.hbs template --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/treeview/prism-treeview.min.css">
   {{!-- PrismJS code block style --}}
   <style type="text/css">
-    .anchor-deep-link {
+    .anchorjs-link {
       text-decoration: none !important;
-      color: var(--blue) !important;
+      color: var(--green) !important;
     }
     pre[class*=language-] {
       /* Code block style */
@@ -307,9 +307,7 @@ into the {body} of the default.hbs template --}}
   <script>
     anchors.options = {
       placement: 'left',
-      visible: 'always',
       icon: '#',
-      class: 'anchor-deep-link'
     }
     anchors.add('post-content h1,post-content h2,post-content h3,post-content h4,post-content h5,post-content h6');
   </script>
