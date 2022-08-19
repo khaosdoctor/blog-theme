@@ -4,8 +4,7 @@
   "demo": "https://lyra.ghost.io",
   "version": "2.3.3",
   "engines": {
-    "ghost": ">=4.0.0",
-    "ghost-api": "v3"
+    "ghost": ">=4.0.0"
   },
   "license": "MIT",
   "screenshots": {

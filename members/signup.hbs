@@ -34,6 +34,7 @@
       <script>window.location = '{{@site.url}}';</script>
 
     {{else if @member}}
+    {{#get "tier"}}
       <script>window.location = '{{@site.url}}';</script>
 
       {{!-- Logged in, not paying: Check out --}}
@@ -44,7 +45,7 @@
           <div class="checkout-plan">
             <header class="checkout-plan-header">
               <h3>Monthly</h3>
-              <span>{{@price.currency_symbol}}</span><strong>{{@price.monthly}}</strong> / month
+              <span>{{price currency=currency}}</span><strong>{{price monthly_price currency=currency}}</strong> / month
             </header>
             <div class="checkout-plan-content">
               <ul>
@@ -59,7 +60,7 @@
           <div class="checkout-plan">
             <header class="checkout-plan-header">
               <h3>Yearly</h3>
-              <span>{{@price.currency_symbol}}</span><strong>{{@price.yearly}}</strong> / year
+              <span>{{price currency=currency}}</span><strong>{{price yearly_price currency=currency}}</strong> / year
             </header>
             <div class="checkout-plan-content">
               <ul>
@@ -74,6 +75,7 @@
           </div>
         </div>
       </div>
+      {{/get}}
 
     {{else}}
 
