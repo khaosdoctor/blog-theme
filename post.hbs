@@ -158,6 +158,7 @@ into the {body} of the default.hbs template --}}
           {{/if}}
           <section class="post-full-content">
             <div class="post-content">
+              <aside class="gh-sidebar"><div class="gh-toc"></div></aside> {{! The TOC will be inserted here }}
               {{content}}
             </div>
             {{> "social-share" position="end"}}
