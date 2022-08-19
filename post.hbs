@@ -304,10 +304,6 @@ into the {body} of the default.hbs template --}}
   {{!-- Prism Code Highlight --}}
   <script>
     window.addEventListener('DOMContentLoaded', (event) => {
-      document.querySelectorAll('pre[class*=language-]').forEach(function (node) {
-        node.classList.add('line-numbers');
-      });
-
       document.querySelectorAll('pre[class*=language-] code').forEach(function (node) {
         node.classList.add('match-braces');
         node.classList.add('rainbow-braces')
