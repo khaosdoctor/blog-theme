@@ -290,6 +290,16 @@ body {
 /* 5. Site Navigation
 /* ---------------------------------------------------------- */
 
+.gh-search {
+  background-color: transparent;
+}
+
+.gh-search > svg {
+  transition: fill .5s ease-in-out;
+  fill: hsla(0,0%,100%,.7);
+  height: 19px;
+}
+
 .site-nav-main {
   position: fixed;
   top: 0;
