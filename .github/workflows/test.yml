@@ -7,10 +7,10 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     strategy:
       matrix:
-        node: [ '10', '12' ]
+        node: [ '12', '14', '16', '18' ]
     name: Node ${{ matrix.node }}
     steps:
       - uses: actions/checkout@v1
