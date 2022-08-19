@@ -299,6 +299,10 @@ into the {body} of the default.hbs template --}}
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
+  <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+  <script>
+    anchors.add();
+  </script>
   {{!-- Prism Code Highlight --}}
   <script>
     window.addEventListener('DOMContentLoaded', (event) => {
