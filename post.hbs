@@ -23,8 +23,8 @@ into the {body} of the default.hbs template --}}
   {{!-- PrismJS code block style --}}
   <style type="text/css">
     .anchor-deep-link {
-      text-decoration: none;
-      color: var(--blue)
+      text-decoration: none !important;
+      color: var(--blue) !important;
     }
     pre[class*=language-] {
       /* Code block style */
@@ -307,10 +307,11 @@ into the {body} of the default.hbs template --}}
   <script>
     anchors.options = {
       placement: 'left',
+      visible: 'always',
       icon: '#',
       class: 'anchor-deep-link'
     }
-    anchors.add();
+    anchors.add('post-content h1,post-content h2,post-content h3,post-content h4,post-content h5,post-content h6');
   </script>
   {{!-- Prism Code Highlight --}}
   <script>
