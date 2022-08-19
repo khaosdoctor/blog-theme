@@ -22,6 +22,10 @@ into the {body} of the default.hbs template --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/treeview/prism-treeview.min.css">
   {{!-- PrismJS code block style --}}
   <style type="text/css">
+    .anchor-deep-link {
+      text-decoration: none;
+      color: var(--blue)
+    }
     pre[class*=language-] {
       /* Code block style */
       margin: 1.75em 0;
@@ -301,6 +305,11 @@ into the {body} of the default.hbs template --}}
 {{#contentFor "scripts"}}
   <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
   <script>
+    anchors.options = {
+      placement: 'left',
+      icon: '#',
+      class: 'anchor-deep-link'
+    }
     anchors.add();
   </script>
   {{!-- Prism Code Highlight --}}
