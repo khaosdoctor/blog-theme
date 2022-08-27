@@ -42,7 +42,7 @@
 
 </head>
 
-<body class="{{body_class}}">
+<body class="{{body_class}} line-numbers">
   <div class="line-wrapper">
     <div class="line green"></div>
     <div class="line red"></div>
@@ -171,7 +171,6 @@
 
   {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
   {{{block "scripts"}}}
-
   {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
   {{ghost_foot}}
 

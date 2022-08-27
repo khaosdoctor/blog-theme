@@ -290,6 +290,16 @@ body {
 /* 5. Site Navigation
 /* ---------------------------------------------------------- */
 
+.gh-search {
+  background-color: transparent;
+}
+
+.gh-search > svg {
+  transition: fill .5s ease-in-out;
+  fill: hsla(0,0%,100%,.7);
+  height: 19px;
+}
+
 .site-nav-main {
   position: fixed;
   top: 0;
@@ -1256,7 +1266,7 @@ Usage (In Ghost editor):
   padding: 0 5px 2px;
   font-size: 0.8em;
   line-height: 1em;
-  font-weight: 400 !important;
+  font-weight: bold !important;
   background: var(--darker-bg);
   border-radius: 3px;
 }
