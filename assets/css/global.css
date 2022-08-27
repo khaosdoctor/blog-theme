@@ -1,6 +1,14 @@
 /* Fonts
 /* ---------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+/* CSS */
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
+/* Specify in CSS */
+code { font-family: 'Fira Code', monospace; }
+
+@supports (font-variation-settings: normal) {
+  code { font-family: 'Fira Code VF', monospace; }
+}
 
 @font-face {
   font-family: "Aller";

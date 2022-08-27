@@ -13,8 +13,7 @@ into the {body} of the default.hbs template --}}
   {{!-- Prism Code Highlight style --}}
   {{!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism-okaidia.min.css"> --}}
 
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/PrismJS/prism-themes/master/themes/prism-dracula.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism-okaidia.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1/themes/prism-dracula.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/autolinker/prism-autolinker.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/toolbar/prism-toolbar.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/line-numbers/prism-line-numbers.min.css">
@@ -23,6 +22,12 @@ into the {body} of the default.hbs template --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/treeview/prism-treeview.min.css">
   {{!-- PrismJS code block style --}}
   <style type="text/css">
+    .anchorjs-link {
+      text-decoration: none !important;
+      color: red !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
     pre[class*=language-] {
       /* Code block style */
       margin: 1.75em 0;
@@ -45,7 +50,6 @@ into the {body} of the default.hbs template --}}
     .toolbar span {
       /* Toolbar Language label */
       font-weight: bold;
-      background: rgba(107, 10, 13, 0.5) !important;
       padding: 5px !important;
     }
 
@@ -183,7 +187,7 @@ into the {body} of the default.hbs template --}}
                 {{/if}}
                 <a class="button large primary" onclick="sendLeadEvent('Post &quot;{{title}}&quot; Signup')" href="https://news.lsantos.dev?utm_source=blog&utm_medium=post-button">Inscreva-se
                   agora!</a>
-                <p><small>Já é assinante? <a href="#/portal/signin">Faça log in!</a></small></p>
+                <p><small>Já é assinante? <a href="/signin">Faça log in!</a></small></p>
               </div>
             </aside>
           </section>
@@ -301,13 +305,17 @@ into the {body} of the default.hbs template --}}
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
+  <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+  <script>
+    anchors.options = {
+      placement: 'left',
+      icon: '#',
+    }
+    anchors.add('h1, h2, h3, h4, h5, h6');
+  </script>
   {{!-- Prism Code Highlight --}}
   <script>
     window.addEventListener('DOMContentLoaded', (event) => {
-      document.querySelectorAll('pre[class*=language-]').forEach(function (node) {
-        node.classList.add('line-numbers');
-      });
-
       document.querySelectorAll('pre[class*=language-] code').forEach(function (node) {
         node.classList.add('match-braces');
         node.classList.add('rainbow-braces')

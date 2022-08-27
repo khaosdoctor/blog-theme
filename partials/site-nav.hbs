@@ -32,15 +32,16 @@
             <small>Logado como</small>
             <span class="account-email" title="{{@member.email}}">{{@member.email}}</span>
           </li>
-          {{!-- <li><a href="{{@site.url}}/account/">Conta</a></li> --}} {{!-- Removed account in button --}}
+          <li><a href="{{@site.url}}/account/">Conta</a></li> {{!-- Removed account in button --}}
           <li><a href="#signout" data-members-signout>Log out</a></li>
         </ul>
       </div>
     {{else}}
-      {{!-- <a class="signin-link" href="{{@site.url}}/signin/">Log in</a> --}} {{!-- Removed Sign in button --}}
+      <a class="signin-link button secondary small header-cta" href="{{@site.url}}/signin/">Log in</a> {{!-- Removed Sign in button --}}
       {{!-- <a class="button secondary small header-cta" onclick="sendLeadEvent('Header Donation')" href="{{@site.url}}/doacoes?utm_source=blog&utm_medium=link_footer&utm_campaign=fixed_link">Apoie meu trabalho!</a> --}}
       <a onclick="sendLeadEvent('Header Signup')" class="button primary small header-cta"
          href="https://news.lsantos.dev?utm_source=blog&utm_medium=top-button">Inscreva-se!</a>
+      <button class="gh-search" data-ghost-search title="Buscar no blog">{{> "icons/search"}}</button>
     {{/if}}
   </div>
 </nav>
