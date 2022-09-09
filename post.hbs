@@ -174,16 +174,17 @@ into the {body} of the default.hbs template --}}
 
           <section class="post-full-content">
             <div class="post-content">
-              <p>Você não tem acesso a este post no momento. Mas,
-                se você se inscrever, você conseguirá ver não só este post mas todos os posts do arquivo! Vamos lá!
-                Se inscrever só demora alguns segundos e te dá acesso imediato a tudo!</p>
+              <p>Esse post é exclusivo para assinantes da newsletter!</p>
+              <p>Todos os meses eu envio uma série de conteúdos exclusívos na minha newsletter, quer receber o acesso a esse conteúdo?
+                É só assinar! Prometo que vale a pena, você vai receber conteúdo de qualidade e exclusivo e tudo isso, de graça!
+                </p>
             </div>
             <aside class="post-upgrade-cta">
               <div class="post-upgrade-cta-content">
                 {{#if @member}}
                   <h2>Este post é somente para assinantes pagos</h2>
                 {{else}}
-                  <h2>Este post é somente para assinantes</h2>
+                  <h2>Este post é somente para assinantes, se inscreve! É gratuito!</h2>
                 {{/if}}
                 <a class="button large primary" onclick="sendLeadEvent('Post &quot;{{title}}&quot; Signup')" href="https://news.lsantos.dev?utm_source=blog&utm_medium=post-button">Inscreva-se
                   agora!</a>
@@ -194,6 +195,7 @@ into the {body} of the default.hbs template --}}
 
         {{/if}}
 
+        {{#unless access}}
         <section class="post-full-newsletter">
           <section class="subscribe-form">
             <h3 class="subscribe-form-title">Assine a newsletter!</h3>
@@ -232,6 +234,7 @@ into the {body} of the default.hbs template --}}
             })();
           </script>
         </section>
+        {{/unless}}
 
       </article>
 
