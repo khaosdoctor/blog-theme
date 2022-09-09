@@ -195,7 +195,7 @@ into the {body} of the default.hbs template --}}
 
         {{/if}}
 
-        {{#unless access}}
+        {{#if access}}
         <section class="post-full-newsletter">
           <section class="subscribe-form">
             <h3 class="subscribe-form-title">Assine a newsletter!</h3>
@@ -234,7 +234,7 @@ into the {body} of the default.hbs template --}}
             })();
           </script>
         </section>
-        {{/unless}}
+        {{/if}}
 
       </article>
 
