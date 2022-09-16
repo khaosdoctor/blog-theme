@@ -2,7 +2,7 @@
   "name": "lyra",
   "description": "A premium publication theme for Ghost.",
   "demo": "https://lyra.ghost.io",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "engines": {
     "ghost": ">=4.0.0"
   },
