@@ -1087,6 +1087,23 @@ make sure this only happens on large viewports / desktop-ish devices.
   background: var(--darkmode);
 }
 
+.post-full-content .kg-header-card.kg-width-full {
+  width: 100vw !important;
+  height: 30em !important;
+}
+
+.post-full-content .kg-header-card.kg-width-full .kg-header-card-content {
+  overflow: hidden
+}
+
+.post-full-content .kg-header-card.kg-width-full .kg-header-card-content > picture {
+  margin: 0;
+}
+
+.post-full-content .kg-header-card.kg-width-full .kg-header-card-content > image {
+  margin: 0;
+}
+
 @media (max-width: 1170px) {
   .post-full-content {
     padding: 0 11vw;
@@ -1094,6 +1111,13 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 @media (max-width: 800px) {
+  .post-full-content .kg-header-card.kg-width-full .kg-header-card-content > picture {
+    display: none;
+  }
+
+  .post-full-content .kg-header-card.kg-width-full .kg-layout-split.kg-header-card-content {
+    grid-template-columns: 1fr !important;
+  }
   .post-full-content {
     padding: 0 5vw;
     font-size: 1.8rem;
@@ -1101,6 +1125,9 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 @media (max-width: 500px) {
+  .post-full-content .kg-header-card.kg-width-full .kg-header-card-content > picture {
+    display: none;
+  }
   .post-full-custom-excerpt {
     font-size: 1.9rem;
     line-height: 1.5em;
