@@ -1100,7 +1100,7 @@ make sure this only happens on large viewports / desktop-ish devices.
   margin: 0;
 }
 
-.post-full-content .kg-header-card.kg-width-full .kg-header-card-content > picture image {
+.post-full-content .kg-header-card.kg-width-full .kg-header-card-content .kg-header-card-image {
   margin: 0;
 }
 
