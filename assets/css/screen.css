@@ -1105,17 +1105,24 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 @media (max-width: 1170px) {
+  .post-full-content .kg-header-card.kg-width-full .kg-header-card-content picture {
+    display: none;
+  }
+
+  .post-full-content .kg-header-card.kg-width-full.kg-layout-split .kg-header-card-content {
+    grid-template-columns: 1fr !important;
+  }
   .post-full-content {
     padding: 0 11vw;
   }
 }
 
 @media (max-width: 800px) {
-  .post-full-content .kg-header-card.kg-width-full .kg-header-card-content > picture {
+  .post-full-content .kg-header-card.kg-width-full .kg-header-card-content picture {
     display: none;
   }
 
-  .post-full-content .kg-header-card.kg-width-full .kg-layout-split.kg-header-card-content {
+  .post-full-content .kg-header-card.kg-width-full.kg-layout-split .kg-header-card-content {
     grid-template-columns: 1fr !important;
   }
   .post-full-content {
