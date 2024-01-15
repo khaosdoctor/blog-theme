@@ -1092,6 +1092,10 @@ make sure this only happens on large viewports / desktop-ish devices.
   height: 30em !important;
 }
 
+.post-full-content .kg-card.kg-signup-card.kg-width-full.kg-content-wide.kg-style-accent {
+  width: 100vw !important;
+}
+
 .post-full-content .kg-header-card.kg-width-full .kg-header-card-content {
   overflow: hidden
 }
