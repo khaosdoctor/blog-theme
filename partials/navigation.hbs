@@ -14,11 +14,11 @@
   <ul class="nav" role="menu">
     {{#foreach navigation}}
       {{#match url "https://formacaots.com.br/?utm_source=blog&utm_medium=link_top&utm_campaign=fixed_link"}}
-        <li class="{{link_class for=(url) class=(concat " nav-" slug)}}" role="menuitem"><a
-             onclick="sendSellEvent('link_click', 'Header {{label}}')" href="{{url absolute=" true"}}" aria-label="{{label}}">{{label}}</a></li>
+        <li onclick="sendSellEvent('link_click', 'Header {{label}}')" class="{{link_class for=(url) class=(concat " nav-" slug)}}" role="menuitem"><a
+              href="{{url absolute=" true"}}" aria-label="{{label}}">{{label}}</a></li>
         {{else}}
-          <li class="{{link_class for=(url) class=(concat " nav-" slug)}}" role="menuitem"><a
-               onclick="sendClickEvent('link_click', 'Header {{label}}')" href="{{url absolute=" true"}}" aria-label="{{label}}">{{label}}</a>
+          <li onclick="sendClickEvent('link_click', 'Header {{label}}')" class="{{link_class for=(url) class=(concat " nav-" slug)}}" role="menuitem">
+            <a href="{{url absolute=" true"}}" aria-label="{{label}}">{{label}}</a>
           </li>
       {{/match}}
     {{/foreach}}
