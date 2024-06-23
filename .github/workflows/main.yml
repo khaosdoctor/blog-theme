@@ -23,7 +23,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          node-version: 16
+          node-version: 20
       - run: npm install && npm run zip
       - uses: TryGhost/action-deploy-theme@v1.4.1
         with:
