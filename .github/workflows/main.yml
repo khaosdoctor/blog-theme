@@ -23,7 +23,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          node-version: 20
+          node-version: 16 # Do not update as ghost doesn't run on node 18
       - run: npm install && npm run zip
       - uses: TryGhost/action-deploy-theme@v1.4.1
         with:
